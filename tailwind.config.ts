@@ -17,13 +17,22 @@ const config = {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      jost: "Jost, sans-serif",
+    },
     extend: {
       colors: {
+        accentColor: "hsl(var(--accent-color))",
+
+        // Navbar
+        navbar_text_size: "var(--navbar-text-color)",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        baseBackground: "hsl(var(--base-background))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -53,12 +62,37 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "frame-nav-btn-line-1": {
+          "0%": { left: "-100%" },
+          "100%": {
+            left: "100%",
+          },
+        },
+        "frame-nav-btn-line-2": {
+          "0%": { top: "-100%" },
+          "100%": {
+            top: "100%",
+          },
+        },
+        "frame-nav-btn-line-3": {
+          "0%": { right: "-100%", display: "block" },
+          "100%": {
+            right: "100%",
+          },
+        },
+        "frame-nav-btn-line-4": {
+          "0%": { bottom: "-100%" },
+          "100%": {
+            bottom: "100%",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -71,6 +105,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "animate-nav-btn-line-1": "frame-nav-btn-line-1 2s infinite",
+        "animate-nav-btn-line-2": "frame-nav-btn-line-2 2s infinite",
+        "animate-nav-btn-line-3": "frame-nav-btn-line-3 2s infinite",
+        "animate-nav-btn-line-4": "frame-nav-btn-line-4 2s infinite",
       },
     },
   },
