@@ -3,7 +3,10 @@
 
 # Except these files & folders
 !/app
+!/components
 !index.html
+!tailwind.config.ts
+!/providers
 !package.json
 !tsconfig.json
 !tsconfig.node.json

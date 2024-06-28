@@ -45,7 +45,8 @@
     --radius: 0.5rem;
   }
 
-  .dark {
+  .light {
+    --accent-color: 0, 100%, 50%;
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
