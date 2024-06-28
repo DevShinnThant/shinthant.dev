@@ -18,7 +18,7 @@ export default function ThemeSwitch() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="hover:bg-gray-800 hover:backdrop-opacity-10"
+          className="dark:hover:bg-gray-800 hover:backdrop-opacity-10"
           variant="ghost"
           size="icon"
         >
@@ -28,13 +28,25 @@ export default function ThemeSwitch() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme("light")
+          }}
+        >
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme("dark")
+          }}
+        >
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme("system")
+          }}
+        >
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

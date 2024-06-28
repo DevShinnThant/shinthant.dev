@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Jost } from "next/font/google"
 import { ThemeProvider } from "@/providers/ThemeProvider"
 import Header from "@/components/layouts/header"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const jost = Jost({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jost.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
