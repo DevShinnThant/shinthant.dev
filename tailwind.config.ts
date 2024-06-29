@@ -69,6 +69,7 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        // Navbar
         "frame-nav-btn-line-1": {
           "0%": { left: "-100%" },
           "100%": {
@@ -93,6 +94,33 @@ const config = {
             bottom: "100%",
           },
         },
+        // Navbar
+        "frame-hero-bg": {
+          "0%": {
+            transform: "translate(0%,0%)",
+          },
+          "100%": {
+            transform: "translate(-20%,-20%)",
+          },
+        },
+        "frame-contact-me-btn-icon": {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
+          },
+        },
+
+        "frame-hero-spinner": {
+          "0%": {
+            transform: "rotate(-70deg)",
+          },
+          "100%": {
+            transform: "rotate(70deg)",
+          },
+        },
+
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -109,10 +137,24 @@ const config = {
         "animate-nav-btn-line-2": "frame-nav-btn-line-2 2s infinite",
         "animate-nav-btn-line-3": "frame-nav-btn-line-3 2s infinite",
         "animate-nav-btn-line-4": "frame-nav-btn-line-4 2s infinite",
+        "animate-frame-hero-bg": "frame-hero-bg 10s infinite",
+        "animate-frame-contact-me-btn-icon":
+          "frame-contact-me-btn-icon .3s ease",
+        "animate-frame-hero-spinner": "frame-hero-spinner 30s infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: any) {
+      addUtilities({
+        ".bg-clip-text": {
+          "background-clip": "text",
+          "-webkit-background-clip": "text",
+        },
+      })
+    },
+  ],
 } satisfies Config
 
 export default config

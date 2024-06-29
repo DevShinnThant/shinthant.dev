@@ -95,6 +95,20 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  ::selection {
+    background-color: #05cd77;
+    color: #ffffff;
+  }
+  ::-webkit-selection {
+    background-color: #05cd77;
+    color: #ffffff;
+  }
+
+  ::-moz-selection {
+    background-color: #05cd77;
+    color: #ffffff;
+  }
 }
 
 @layer components {
@@ -170,5 +184,57 @@
     @apply absolute bottom-[-100%] left-0 h-full w-[1px] animate-animate-nav-btn-line-4;
     animation-delay: 1.5s;
     background: linear-gradient(360deg, transparent, hsl(var(--accent-color)));
+  }
+
+  .contact_me_btn {
+    background-image: radial-gradient(
+        circle at 50% 85.69%,
+        #8fe566,
+        rgba(143, 229, 102, 0) 77.6%
+      ),
+      radial-gradient(
+        circle at 50% 111.57%,
+        #72e98a,
+        rgba(114, 233, 138, 0) 56%
+      ),
+      radial-gradient(circle at 50% 132.04%, #0acf83, rgba(10, 207, 131, 0) 69%),
+      linear-gradient(rgba(126, 249, 139, 0) 21%, #7ef98b 93.49%),
+      linear-gradient(#0acf83, #0acf83);
+    border-radius: 0.375rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+      inset 0 2px 2px rgba(221, 221, 221, 0.5),
+      inset 0 -2px #13ae72,
+      0 0 0 4px rgba(221, 221, 221, 0.05),
+      0 20px 120px -10px rgba(10, 207, 131, 0.8);
+  }
+
+  .contact_me_btn_overlay {
+    z-index: 1;
+    opacity: 0;
+    background-image: radial-gradient(
+        circle at 176% 143%,
+        #8fe566,
+        rgba(143, 229, 102, 0) 77%
+      ),
+      radial-gradient(circle at 138% 79%, #fff, rgba(255, 255, 255, 0)),
+      radial-gradient(circle at 50% 254.79%, #fff, rgba(255, 255, 255, 0)),
+      linear-gradient(247deg, #7ef98b 48%, rgba(126, 249, 139, 0) 92%),
+      linear-gradient(#0acf83, #0acf83);
+    transition: opacity 0.2s;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+  }
+
+  .hero_spinner {
+    @apply animate-animate-frame-hero-spinner;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: both;
   }
 }
