@@ -1,10 +1,12 @@
-import Code from "@/app/assets/code.png"
-import HeroBG from "@/app/assets/hero-bg.webp"
-import HeroLines from "@/app/assets/hero-lines.png"
-import HeroSpinner from "@/app/assets/hero-spinner.webp"
-import Source from "@/app/assets/source.png"
-import { ArrowRightIcon } from "@radix-ui/react-icons"
+import Code from "@/app/assets/hero/code.png"
+import HeroBG from "@/app/assets/hero/hero-bg.webp"
+import HeroLines from "@/app/assets/hero/hero-lines.png"
+import HeroSpinner from "@/app/assets/hero/hero-spinner.webp"
+import Source from "@/app/assets/hero/source.png"
+import { ArrowDownIcon, ArrowRightIcon } from "@radix-ui/react-icons"
 import Image from "next/image"
+import Link from "next/link"
+import SocialLinks from "../SocialLinks"
 import { Button } from "../ui/button"
 
 export default function HeroSection() {
@@ -81,6 +83,32 @@ export default function HeroSection() {
             </div>
           </div>
         </Button>
+      </div>
+
+      <div className="absolute bottom-4 left-4">
+        <div
+          style={{
+            writingMode: "vertical-lr",
+          }}
+          className="flex items-center gap-2 dark:text-gray-400"
+        >
+          <span className="text-sm tracking-widest">About</span>
+          <ArrowDownIcon />
+        </div>
+      </div>
+
+      <div className="absolute right-4 bottom-[20%]">
+        <SocialLinks />
+      </div>
+
+      <div className="absolute bottom-4 right-4">
+        <Link
+          href="#project"
+          className="flex items-center gap-2 dark:text-gray-400"
+        >
+          <span className="text-sm tracking-widest">View Project</span>
+          <ArrowRightIcon />
+        </Link>
       </div>
     </div>
   )
