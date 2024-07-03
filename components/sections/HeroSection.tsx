@@ -1,23 +1,31 @@
+"use client"
+
+import heroLottieData from "@/app/assets/hero-lottie.json"
 import Code from "@/app/assets/hero/code.png"
-import HeroBG from "@/app/assets/hero/hero-bg.webp"
 import HeroLines from "@/app/assets/hero/hero-lines.png"
 import HeroSpinner from "@/app/assets/hero/hero-spinner.webp"
 import Source from "@/app/assets/hero/source.png"
 import { ArrowDownIcon, ArrowRightIcon } from "@radix-ui/react-icons"
+import { ArrowDown2, Mouse } from "iconsax-react"
 import Image from "next/image"
 import Link from "next/link"
+import Lottie from "react-lottie"
 import SocialLinks from "../SocialLinks"
 import { Button } from "../ui/button"
 
 export default function HeroSection() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: heroLottieData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  }
   return (
     <div className="w-full bg-baseBackground min-h-screen pt-[4.5rem]">
-      <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
-        <Image
-          alt="test"
-          className="select-none animate-animate-frame-hero-bg direction-alternate ease-linear running fill-mode-both"
-          src={HeroBG}
-        />
+      <div className="absolute hidden md:block left-[-50px] top-[-14px] rotate-270">
+        <Lottie options={defaultOptions} />
       </div>
 
       <Image
@@ -109,6 +117,13 @@ export default function HeroSection() {
           <span className="text-sm tracking-widest">View Project</span>
           <ArrowRightIcon />
         </Link>
+      </div>
+
+      <div className="absolute animate-bounce text-white hover:text-accentColor cursor-pointer bottom-4 left-[50%] translate-x-[-50%,-50%]">
+        <div className="flex flex-col gap-1 items-center">
+          <Mouse />
+          <ArrowDown2 size={12} />
+        </div>
       </div>
     </div>
   )
