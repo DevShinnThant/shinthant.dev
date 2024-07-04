@@ -6,7 +6,7 @@ import ThemeSwitch from "../ThemeSwitch"
 export default function Header() {
   return (
     <header className="fixed z-50 top-0 left-0 right-0 bg-transparent backdrop-blur-[6px]">
-      <div className="w-full h-auto bg-gray-50 shadow-sm  dark:bg-transparent min-h-[4.5rem] flex items-center px-[5%]">
+      <div className="w-full h-auto bg-gray-50 shadow-sm dark:bg-transparent min-h-[4.5rem] flex items-center px-[5%]">
         <div className="w-full grid items-center grid-cols-8 md:grid-cols-12">
           <div className="col-span-4">
             <Link href="/" className="text-xl">

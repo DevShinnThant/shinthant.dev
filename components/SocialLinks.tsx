@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function SocialLinks() {
   return (
     <>
-      <div className="absolute right-4 bottom-[20%]">
+      <div className="absolute right-4 bottom-[5%] md:bottom-[20%]">
         <div className="flex flex-col gap-6 items-center">
           {socialLinks.map((link) => (
             <Link
@@ -32,7 +32,7 @@ export default function SocialLinks() {
         </div>
       </div>
 
-      <div className="absolute bottom-4 right-4">
+      <div className="hidden md:block absolute bottom-4 right-4">
         <Link
           href="#project"
           className="flex items-center gap-2 dark:text-gray-400"
@@ -42,9 +42,9 @@ export default function SocialLinks() {
         </Link>
       </div>
 
-      <div className="absolute animate-bounce text-white hover:text-accentColor cursor-pointer bottom-4 left-[50%] translate-x-[-50%,-50%]">
+      <div className="absolute animate-bounce text-gray-400 hover:text-accentColor cursor-pointer bottom-4 left-[50%] translate-x-[-50%,-50%]">
         <div className="flex flex-col gap-1 items-center">
-          <Mouse />
+          <Mouse size={20} />
           <ArrowDown2 size={12} />
         </div>
       </div>
