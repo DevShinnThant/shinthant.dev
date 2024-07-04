@@ -21,6 +21,10 @@ const config = {
       jost: "Jost, sans-serif",
     },
     extend: {
+      boxShadow: {
+        resume_btn_shadow:
+          "0 0 5px hsl(var(--accent-color)), 0 0 25px hsl(var(--accent-color)), 0 0 50px hsl(var(--accent-color)), 0 0 200px hsl(var(--accent-color))",
+      },
       colors: {
         accentColor: "hsl(var(--accent-color))",
 

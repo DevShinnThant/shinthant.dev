@@ -1,5 +1,6 @@
 import navlinks from "@/lib/navConfig"
 import Link from "next/link"
+import ResumeBtn from "../ResumeBtn"
 import ThemeSwitch from "../ThemeSwitch"
 
 export default function Header() {
@@ -25,15 +26,7 @@ export default function Header() {
             </div>
           </div>
           <div className="col-span-4 flex justify-end gap-10">
-            <button className="nav_btn group hidden md:block">
-              <span className="nav_btn_line_1" />
-              <span className="nav_btn_line_2" />
-              <span className="nav_btn_line_3" />
-              <span className="nav_btn_line_4" />
-              <div className="text-xs group-hover:text-white text-accentColor dark:text-gray-300">
-                Resume
-              </div>
-            </button>
+            <ResumeBtn />
             <ThemeSwitch />
           </div>
         </div>

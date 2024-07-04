@@ -29,7 +29,7 @@ export default function HeroTool() {
           alt="test"
         />
         <div className="w-20 h-20 bg-gradient-to-tl from-[#132726] to-[#13191B] shadow-md rounded-full flex justify-center items-center">
-          <Image width={24} src={Source} alt="s" />
+          <Image priority width={24} src={Source} alt="s" />
         </div>
       </div>
 

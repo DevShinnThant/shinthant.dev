@@ -147,43 +147,8 @@
     transition: transform 0.25s ease-out;
   }
 
-  .nav_btn {
-    @apply relative inline-block h-[34px] w-[100px] overflow-hidden border-[0.01px] border-gray-800;
-    transition: 0.5s;
-  }
-
-  .nav_btn:hover {
-    border: 0;
-    background-color: hsl(var(--accent-color));
-    box-shadow:
-      0 0 5px hsl(var(--accent-color)),
-      0 0 25px hsl(var(--accent-color)),
-      0 0 50px hsl(var(--accent-color)),
-      0 0 200px hsl(var(--accent-color));
+  .webkit-reflect {
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-  }
-
-  .nav_btn_line_1 {
-    @apply absolute left-0 top-0 h-[1px] w-full animate-animate-nav-btn-line-1;
-    background: linear-gradient(90deg, transparent, hsl(var(--accent-color)));
-  }
-
-  .nav_btn_line_2 {
-    @apply absolute right-0 top-[-100%] h-full w-[1px] animate-animate-nav-btn-line-2;
-    animation-delay: 0.5s;
-    background: linear-gradient(180deg, transparent, hsl(var(--accent-color)));
-  }
-
-  .nav_btn_line_3 {
-    @apply absolute bottom-0 right-[-100%] h-[1px] w-full animate-animate-nav-btn-line-3;
-    animation-delay: 1s;
-    background: linear-gradient(270deg, transparent, hsl(var(--accent-color)));
-  }
-
-  .nav_btn_line_4 {
-    @apply absolute bottom-[-100%] left-0 h-full w-[1px] animate-animate-nav-btn-line-4;
-    animation-delay: 1.5s;
-    background: linear-gradient(360deg, transparent, hsl(var(--accent-color)));
   }
 
   .contact_me_btn {
