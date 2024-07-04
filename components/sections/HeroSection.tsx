@@ -1,7 +1,7 @@
 "use client"
 
-import HeroLines from "@/app/assets/hero/hero-lines.png"
-import heroLottieData from "@/app/assets/lottie/hero-lottie.json"
+import HeroLines from "@/public/assets/hero/hero-lines.png"
+import heroLottieData from "@/public/assets/lottie/hero-lottie.json"
 import Image from "next/image"
 import Lottie from "react-lottie"
 import SocialLinks from "../SocialLinks"

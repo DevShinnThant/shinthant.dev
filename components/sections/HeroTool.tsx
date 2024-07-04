@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
-import Code from "@/app/assets/hero/code.png"
-import HeroSpinner from "@/app/assets/hero/hero-spinner.webp"
-import Source from "@/app/assets/hero/source.png"
+import Code from "@/public/assets/hero/code.png"
+import HeroSpinner from "@/public/assets/hero/hero-spinner.webp"
+import Source from "@/public/assets/hero/source.png"
 import { gsap } from "gsap"
 import Image from "next/image"
 
