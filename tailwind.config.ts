@@ -112,15 +112,6 @@ const config = {
           },
         },
 
-        "frame-hero-spinner": {
-          "0%": {
-            transform: "rotate(-70deg)",
-          },
-          "100%": {
-            transform: "rotate(70deg)",
-          },
-        },
-
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -140,7 +131,6 @@ const config = {
         "animate-frame-hero-bg": "frame-hero-bg 10s infinite",
         "animate-frame-contact-me-btn-icon":
           "frame-contact-me-btn-icon .3s ease",
-        "animate-frame-hero-spinner": "frame-hero-spinner 30s infinite",
       },
     },
   },

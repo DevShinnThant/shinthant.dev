@@ -229,12 +229,4 @@
     left: 0%;
     right: 0%;
   }
-
-  .hero_spinner {
-    @apply animate-animate-frame-hero-spinner;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-    animation-play-state: running;
-    animation-fill-mode: both;
-  }
 }
