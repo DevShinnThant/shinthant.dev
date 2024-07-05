@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import Link from "next/link"
 import { Button } from "../ui/button"
 
 export default function HeroContent() {
@@ -22,7 +23,7 @@ export default function HeroContent() {
       },
       {
         y: 0,
-        delay: 2.8,
+        delay: 2.2,
       }
     )
     textAnimationTimeline.fromTo(
@@ -41,15 +42,16 @@ export default function HeroContent() {
   return (
     <div
       ref={sectionRef}
-      className="relative max-w-[55rem]  mt-[7rem] md:mt-[11rem] m-auto w-full flex flex-col gap-4 justify-center items-center"
+      className="absolute max-w-[55rem] m-auto w-full top-[20%] md:top-[50%] left-[50%] -translate-x-1/2 md:-translate-y-1/2 flex flex-col gap-4 justify-center items-center"
     >
       <div className="overflow-hidden">
-        <div className="text-animation bg-[linear-gradient(#fff,rgba(255,255,255,.6))] inline-block text-transparent bg-clip-text  leading-none text-4xl md:text-6xl font-semibold">
+        <div className="text-animation bg-[linear-gradient(#fff,rgba(255,255,255,.6))] inline-block text-transparent bg-clip-text leading-none text-4xl md:text-6xl font-semibold">
           It&apos;s Shinn Thant
         </div>
       </div>
+
       <div className="overflow-hidden">
-        <div className="text-animation  text-2xl md:text-4xl font-semibold">
+        <div className="text-animation text-2xl md:text-4xl font-semibold">
           <span className="bg-[linear-gradient(#fff,rgba(255,255,255,.6))] inline-block text-transparent bg-clip-text">
             A
           </span>{" "}
@@ -60,7 +62,7 @@ export default function HeroContent() {
         </div>
       </div>
 
-      <div className="w-[300px] relative z-30 text-center md:w-[370px] text-sm bg-[linear-gradient(#fff,rgba(255,255,255,.6))] inline-block text-transparent bg-clip-text">
+      <div className="w-[300px] md:w-[370px] relative z-30 text-center text-sm bg-[linear-gradient(#fff,rgba(255,255,255,.6))] inline-block text-transparent bg-clip-text">
         Passionate and detail-oriented frontend developer with a knack for
         creating visually appealing and user-friendly web interfaces
       </div>
@@ -69,17 +71,21 @@ export default function HeroContent() {
         Where creativity meets functionality.
       </div>
 
-      <Button className="contact_me_btn shadow-md mt-12 md:mt-3 group flex items-center gap-2">
-        <div className="dark:text-black relative z-[3]">Contact Me</div>
+      <Link
+        href="#contact"
+        aria-label="Contact Me"
+        className="contact_me_btn px-4 py-[6px] shadow-md mt-10 md:mt-3 group flex items-center gap-2"
+      >
+        <div className="dark:text-black relative z-[3] text-sm">Contact Me</div>
+        <div className="sr-only">Contact Me</div>
         <div className="contact_me_btn_overlay group-hover:opacity-100" />
-
         <div className="relative group overflow-hidden w-4 z-[3]">
-          <div className="flex group-hover:animate-animate-frame-contact-me-btn-icon  translate-x-[-100%]">
+          <div className="flex group-hover:animate-animate-frame-contact-me-btn-icon translate-x-[-100%]">
             <ArrowRightIcon className="text-black flex-none relative z-[3]" />
             <ArrowRightIcon className="text-black flex-none relative z-[3]" />
           </div>
         </div>
-      </Button>
+      </Link>
     </div>
   )
 }

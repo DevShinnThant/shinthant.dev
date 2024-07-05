@@ -11,6 +11,9 @@ export default function SocialLinks() {
             <Link
               key={link.id}
               title={link.title}
+              target="_blank"
+              aria-label={link.title}
+              rel="noopener noreferrer"
               href={link.link}
               className="scale-110 rounded link-outline"
             >
@@ -21,20 +24,23 @@ export default function SocialLinks() {
       </div>
 
       <div className="absolute bottom-4 left-4">
-        <div
+        <Link
+          href="#blog"
           style={{
             writingMode: "vertical-lr",
           }}
+          aria-label="blog"
           className="flex items-center gap-2 dark:text-gray-400"
         >
-          <span className="text-sm tracking-widest">About</span>
+          <span className="text-sm tracking-widest">Blog</span>
           <ArrowDownIcon />
-        </div>
+        </Link>
       </div>
 
       <div className="hidden md:block absolute bottom-4 right-4">
         <Link
           href="#project"
+          aria-label="project"
           className="flex items-center gap-2 dark:text-gray-400"
         >
           <span className="text-sm tracking-widest">View Project</span>
@@ -42,12 +48,16 @@ export default function SocialLinks() {
         </Link>
       </div>
 
-      <div className="absolute animate-bounce text-gray-400 hover:text-accentColor cursor-pointer bottom-4 left-[50%] translate-x-[-50%,-50%]">
+      <Link
+        href="#about"
+        aria-label="about"
+        className="absolute animate-bounce text-gray-400 hover:text-accentColor cursor-pointer bottom-4 left-[50%] -translate-x-1/2"
+      >
         <div className="flex flex-col gap-1 items-center">
           <Mouse size={20} />
           <ArrowDown2 size={12} />
         </div>
-      </div>
+      </Link>
     </>
   )
 }

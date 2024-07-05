@@ -8,18 +8,16 @@ import HeroTool from "./HeroTool"
 
 export default function HeroSection() {
   return (
-    <div className="w-full bg-baseBackground min-h-screen pt-[4.5rem]">
+    <section className="w-full min-h-screen bg-baseBackground pt-[4.5rem]">
       <Image
-        className="w-[38rem] absolute select-none pointer-events-none left-[50%] translate-x-[-50%] top-[7.5rem] md:top-[8.6rem]"
+        className="w-[38rem] absolute top-[7.5rem] md:top-[50%] left-[50%] -translate-x-1/2 md:-translate-y-1/2 select-none pointer-events-none"
         alt="hero-background"
         src={HeroLines}
+        aria-label="Hero Background Illustration"
       />
-
       <HeroTool />
-
       <HeroContent />
-
       <SocialLinks />
-    </div>
+    </section>
   )
 }

@@ -73,40 +73,6 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        // Navbar
-        "frame-nav-btn-line-1": {
-          "0%": { left: "-100%" },
-          "100%": {
-            left: "100%",
-          },
-        },
-        "frame-nav-btn-line-2": {
-          "0%": { top: "-100%" },
-          "100%": {
-            top: "100%",
-          },
-        },
-        "frame-nav-btn-line-3": {
-          "0%": { right: "-100%", display: "block" },
-          "100%": {
-            right: "100%",
-          },
-        },
-        "frame-nav-btn-line-4": {
-          "0%": { bottom: "-100%" },
-          "100%": {
-            bottom: "100%",
-          },
-        },
-        // Navbar
-        "frame-hero-bg": {
-          "0%": {
-            transform: "translate(0%,0%)",
-          },
-          "100%": {
-            transform: "translate(-20%,-20%)",
-          },
-        },
         "frame-contact-me-btn-icon": {
           "0%": {
             transform: "translateX(-100%)",
@@ -128,11 +94,6 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "animate-nav-btn-line-1": "frame-nav-btn-line-1 2s infinite",
-        "animate-nav-btn-line-2": "frame-nav-btn-line-2 2s infinite",
-        "animate-nav-btn-line-3": "frame-nav-btn-line-3 2s infinite",
-        "animate-nav-btn-line-4": "frame-nav-btn-line-4 2s infinite",
-        "animate-frame-hero-bg": "frame-hero-bg 10s infinite",
         "animate-frame-contact-me-btn-icon":
           "frame-contact-me-btn-icon .3s ease",
       },

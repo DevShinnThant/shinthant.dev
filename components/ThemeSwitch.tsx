@@ -21,6 +21,7 @@ export default function ThemeSwitch() {
           className="dark:hover:bg-gray-800 hover:backdrop-opacity-10"
           variant="ghost"
           size="icon"
+          aria-label="Switch Theme"
         >
           <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <MoonIcon className="absolute h-[1.2rem] text-white w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />

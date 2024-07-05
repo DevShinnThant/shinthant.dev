@@ -17,6 +17,7 @@ export default function MobileNav() {
         <Button
           className="dark:text-white px-2 flex justify-center items-center"
           variant="default"
+          aria-label="Toggle Navbar"
         >
           <HambergerMenu />
           <span className="sr-only">Toggle Navbar</span>

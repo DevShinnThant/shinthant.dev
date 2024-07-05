@@ -37,33 +37,37 @@ export default function HeroTool() {
   }, [])
 
   return (
-    <div className="max-w-[75rem] min-h-[5rem] m-auto w-full mt-[24rem] md:mt-[8rem] absolute left-0 right-0 flex items-center justify-between">
-      <div className="relative  w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
-        <div className="absolute hidden md:block left-[-10rem] bottom-[3rem] rotate-270">
+    <div className="max-w-[75rem] min-h-[5rem] m-auto w-full absolute top-[55%] md:top-[50%] md:-translate-y-1/2 left-0 right-0 flex items-center justify-between">
+      {/* Circle */}
+      <div className="relative overflow-hidden md:overflow-visible w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
+        <div className="absolute hidden md:block select-none pointer-events-none left-[-10rem] bottom-[3rem] rotate-270">
           <Lottie options={defaultOptions} />
         </div>
         <Image
           ref={firstSpinnerRef}
-          className="w-full h-full object-cover select-none pointer-events-none  absolute top-0 left-0 right-0 bottom-0"
+          className="w-full h-full object-cover select-none pointer-events-none"
           src={HeroSpinner}
           alt="hero-background"
         />
-        <div className="w-14 h-14 absolute z-[1] md:w-20 md:h-20 bg-gradient-to-tl from-[#132726] to-[#13191B] shadow-md rounded-full flex justify-center items-center">
+        <div className="w-14 h-14 md:w-20 md:h-20 select-none pointer-events-none absolute z-[1] bg-gradient-to-tl from-[#132726] to-[#13191B] shadow-md rounded-full flex justify-center items-center">
           <Image className="w-4 md:w-6" src={Source} alt="hero-background" />
         </div>
       </div>
+      {/* Circle */}
 
-      <div className="relative overflow-hidden w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
+      {/* Circle */}
+      <div className="relative overflow-hidden md:overflow-visible w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
         <Image
           ref={secondSpinnerRef}
-          className="w-full h-full rotate-180 object-cover select-none pointer-events-none hero_spinner absolute top-0 left-0 right-0 bottom-0"
+          className="w-full h-full rotate-180 object-cover select-none pointer-events-none"
           src={HeroSpinner}
           alt="hero-background"
         />
-        <div className="w-14 h-14 md:w-20 md:h-20 bg-gradient-to-tl from-[#132726] to-[#13191B] shadow-md rounded-full flex justify-center items-center">
+        <div className="w-14 h-14 md:w-20 md:h-20 select-none pointer-events-none absolute z-[1] bg-gradient-to-tl from-[#132726] to-[#13191B] shadow-md rounded-full flex justify-center items-center">
           <Image className="w-4 md:w-6" src={Code} alt="hero-background" />
         </div>
       </div>
+      {/* Circle */}
     </div>
   )
 }
