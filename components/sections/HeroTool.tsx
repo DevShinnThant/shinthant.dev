@@ -37,7 +37,7 @@ export default function HeroTool() {
   }, [])
 
   return (
-    <div className="max-w-[75rem] min-h-[5rem] m-auto w-full mt-[28rem] md:mt-[8rem] absolute left-0 right-0 flex items-center justify-between">
+    <div className="max-w-[75rem] min-h-[5rem] m-auto w-full mt-[24rem] md:mt-[8rem] absolute left-0 right-0 flex items-center justify-between">
       <div className="relative  w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
         <div className="absolute hidden md:block left-[-10rem] bottom-[3rem] rotate-270">
           <Lottie options={defaultOptions} />
