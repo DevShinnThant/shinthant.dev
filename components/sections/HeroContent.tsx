@@ -60,7 +60,7 @@ export default function HeroContent() {
         </div>
       </div>
 
-      <div className="w-[300px] relative z-30 text-start md:w-[370px] text-sm bg-[linear-gradient(#fff,rgba(255,255,255,.6))] inline-block text-transparent bg-clip-text">
+      <div className="w-[300px] relative z-30 text-center md:w-[370px] text-sm bg-[linear-gradient(#fff,rgba(255,255,255,.6))] inline-block text-transparent bg-clip-text">
         Passionate and detail-oriented frontend developer with a knack for
         creating visually appealing and user-friendly web interfaces
       </div>

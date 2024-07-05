@@ -28,7 +28,7 @@ const Loader = () => {
       )}
     >
       <div className="w-full h-full flex justify-center items-center">
-        <Progress value={progress} className="w-[15%]" />
+        <Progress value={progress} className="w-[20%] md:w-[15%] h-[6px]" />
       </div>
     </div>
   )

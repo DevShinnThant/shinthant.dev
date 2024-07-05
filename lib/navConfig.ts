@@ -1,19 +1,19 @@
 const navlinks = [
     {
         title:"About",
-        href:"/about"
+        href:"#about"
     },
     {
         title:"Project",
-        href:"/project"
+        href:"#project"
     },
     {
         title:"Blog",
-        href:"/blog"
+        href:"#blog"
     },
     {
         title:"Contact",
-        href:"/contact"
+        href:"#contact"
     },
 ]
 

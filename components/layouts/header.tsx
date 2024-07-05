@@ -6,6 +6,7 @@ import gsap from "gsap"
 import Link from "next/link"
 import ResumeBtn from "../ResumeBtn"
 import ThemeSwitch from "../ThemeSwitch"
+import MobileNav from "./MobileNav"
 
 export default function Header() {
   const headerRef = useRef(null)
@@ -42,9 +43,10 @@ export default function Header() {
               ))}
             </div>
           </div>
-          <div className="col-span-4 flex justify-end gap-10">
+          <div className="col-span-4 flex items-center justify-end gap-2 md:gap-10">
             <ResumeBtn />
             <ThemeSwitch />
+            <MobileNav />
           </div>
         </div>
       </div>

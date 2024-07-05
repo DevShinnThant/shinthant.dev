@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { Jost } from "next/font/google"
 import { ThemeProvider } from "@/providers/ThemeProvider"
 import Loader from "@/components/Loader"
-import Header from "@/components/layouts/header"
+import Header from "@/components/layouts/Header"
 import "./globals.css"
 
 const jost = Jost({ subsets: ["latin"] })
