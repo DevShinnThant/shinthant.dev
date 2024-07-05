@@ -1,26 +1,10 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import clsx from "clsx"
 import { gsap } from "gsap"
-import { Progress } from "@/components/ui/progress"
 
 const Loader = () => {
   const loadingRef = useRef(null)
-  // const [progress, setProgress] = useState(0)
-
-  // useEffect(() => {
-  //   let i = 0
-  //   const timer = setInterval(() => {
-  //     if (i >= 100) {
-  //       clearInterval(timer)
-  //     } else {
-  //       setProgress((prev) => prev + 2)
-  //       i += 2
-  //     }
-  //   }, 50) // Slowing down the interval for a smoother progress
-  //   return () => clearInterval(timer)
-  // }, [])
 
   useEffect(() => {
     gsap.to(".counter", 0.01, {

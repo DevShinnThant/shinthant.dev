@@ -3,7 +3,6 @@ import { ArrowRightIcon } from "@radix-ui/react-icons"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import Link from "next/link"
-import { Button } from "../ui/button"
 
 export default function HeroContent() {
   const sectionRef = useRef(null)
