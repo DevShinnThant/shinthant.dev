@@ -24,7 +24,7 @@ const Loader = () => {
     <div
       className={clsx(
         "fixed transition-all bg-black top-0 left-0 w-screen h-screen z-[9999]",
-        progress === 100 && "z-[-1]"
+        progress === 100 && "hidden"
       )}
     >
       <div className="w-full h-full flex justify-center items-center">
