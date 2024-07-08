@@ -47,6 +47,9 @@ dependencies:
   react-lottie:
     specifier: ^1.2.4
     version: 1.2.4(react@18.0.0)
+  react-rough-notation:
+    specifier: ^1.0.5
+    version: 1.0.5(react-dom@18.0.0)(react@18.0.0)
   sharp:
     specifier: ^0.33.4
     version: 0.33.4
@@ -3632,6 +3635,17 @@ packages:
       use-sidecar: 1.1.2(@types/react@18.0.0)(react@18.0.0)
     dev: false
 
+  /react-rough-notation@1.0.5(react-dom@18.0.0)(react@18.0.0):
+    resolution: {integrity: sha512-TTDnw1Qn96PwitGsBsjNh4911+o26Vivj/dhHbsHHhN6lDgkQsFhv1X/eOnCjHA2EOyDE5JBQ1HEZ1yW8sCmKA==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      react: 18.0.0
+      react-dom: 18.0.0(react@18.0.0)
+      rough-notation: 0.5.1
+    dev: false
+
   /react-style-singleton@2.2.1(@types/react@18.0.0)(react@18.0.0):
     resolution: {integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==}
     engines: {node: '>=10'}
@@ -3752,6 +3766,10 @@ packages:
     dependencies:
       glob: 7.2.3
     dev: true
+
+  /rough-notation@0.5.1:
+    resolution: {integrity: sha512-ITHofTzm13cWFVfoGsh/4c/k2Mg8geKgBCwex71UZLnNuw403tCRjYPQ68jSAd37DMbZIePXPjDgY0XdZi9HPw==}
+    dev: false
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}

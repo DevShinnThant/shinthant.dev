@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function SocialLinks() {
   return (
     <>
-      <div className="absolute right-4 bottom-[5%] md:bottom-[20%]">
+      <div className="fixed right-4 bottom-[5%] md:bottom-[20%]">
         <div className="flex flex-col gap-6 items-center">
           {socialLinks.map((link) => (
             <Link
