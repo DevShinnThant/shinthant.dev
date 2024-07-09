@@ -70,7 +70,7 @@ export default function ResumeBtn() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Resume"
-      className="group hidden duration-150 md:flex md:justify-center md:items-center relative h-[34px] w-[100px] overflow-hidden border-[.01px] border-gray-800 hover:border-none hover:bg-accentColor hover:shadow-resume_btn_shadow hover:webkit-reflect"
+      className="group hidden duration-150 lg:flex md:justify-center md:items-center relative h-[34px] w-[100px] overflow-hidden border-[.01px] border-gray-800 hover:border-none hover:bg-accentColor hover:shadow-resume_btn_shadow hover:webkit-reflect"
     >
       <span className="sr-only">Resume</span>
       <div

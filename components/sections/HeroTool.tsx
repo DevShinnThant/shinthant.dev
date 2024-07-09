@@ -37,10 +37,10 @@ export default function HeroTool() {
   }, [])
 
   return (
-    <div className="max-w-[75rem] min-h-[5rem] m-auto w-full absolute top-[55%] md:top-[50%] md:-translate-y-1/2 left-0 right-0 flex items-center justify-between">
+    <div className="max-w-[75rem] min-h-[5rem] m-auto w-full absolute top-[55%] md:gap-40 xl:gap-0 md:top-[50%] md:-translate-y-1/2 left-0 right-0 flex items-center justify-between">
       {/* Circle */}
-      <div className="relative overflow-hidden md:overflow-visible w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
-        <div className="absolute hidden md:block select-none pointer-events-none left-[-10rem] bottom-[3rem] rotate-270">
+      <div className="relative overflow-hidden xl:overflow-visible w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
+        <div className="absolute hidden xl:block select-none pointer-events-none left-[-10rem] bottom-[3rem] rotate-270">
           <Lottie options={defaultOptions} />
         </div>
         <Image
@@ -56,7 +56,7 @@ export default function HeroTool() {
       {/* Circle */}
 
       {/* Circle */}
-      <div className="relative overflow-hidden md:overflow-visible w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
+      <div className="relative overflow-hidden xl:overflow-visible w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
         <Image
           ref={secondSpinnerRef}
           className="w-full h-full rotate-180 object-cover select-none pointer-events-none"

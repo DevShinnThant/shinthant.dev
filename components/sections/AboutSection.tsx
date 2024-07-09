@@ -22,7 +22,7 @@ export default function AboutSection() {
       tagName: "span",
     })
 
-    gsap.from(".title .char", {
+    gsap.from(q(".title .char"), {
       opacity: 0.3,
       duration: 0.5,
       ease: "power1.out",
@@ -90,7 +90,7 @@ export default function AboutSection() {
           tl.to(
             q(".user-count"),
             {
-              innerText: 110,
+              innerText: 30,
               duration: 0.5,
               snap: {
                 innerText: 1,
@@ -107,11 +107,11 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative bg-[#161D1F] h-[740px] flex items-center justify-center"
+      className="relative bg-[#161D1F] overflow-x-hidden py-14 px-[5%] md:h-[740px] flex items-center justify-center"
     >
-      <div className="absolute z-10 w-full max-w-[1100px] flex items-center gap-10">
-        <div className="flex flex-col gap-9 w-full">
-          <div className="title dark:text-accentColor text-4xl font-medium">
+      <div className="w-full max-w-[1100px] flex flex-col-reverse md:flex-row items-center gap-20 md:gap-2 lg:gap-10">
+        <div className="w-full flex flex-col gap-7 md:gap-9 ">
+          <div className="title dark:text-accentColor text-3xl md:text-4xl font-medium">
             About me
           </div>
 
@@ -141,37 +141,37 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="w-full border-t-accentColor py-5 border-b-accentColor border-t-[0.01px] border-b-[0.01px] flex items-center gap-20">
-            <div className="flex flex-col items-start">
-              <div className="text-4xl font-medium dark:text-white">
+          <div className="w-full border-t-accentColor py-5 border-b-accentColor border-t-[0.01px] border-b-[0.01px] flex items-center gap-6 md:gap-6 lg:gap-20">
+            <div className="flex flex-col items-center">
+              <div className="text-3xl md:text-4xl font-medium dark:text-white">
                 <span className="experience-count">0</span>{" "}
                 <span className="text-accentColor">+</span>
               </div>
               <div className="dark:text-white text-sm">Experiences</div>
             </div>
 
-            <div className="flex flex-col font-medium items-start">
-              <div className="text-4xl dark:text-white">
+            <div className="flex flex-col font-medium items-center">
+              <div className="text-3xl md:text-4xl dark:text-white">
                 <span className="project-count">0</span>{" "}
                 <span className="text-accentColor">+</span>
               </div>
               <div className="dark:text-white text-sm">Completed Projects</div>
             </div>
 
-            <div className="flex flex-col font-medium items-start">
-              <div className="text-4xl dark:text-white">
+            <div className="flex flex-col font-medium items-center">
+              <div className="text-3xl md:text-4xl dark:text-white">
                 <span className="user-count">0</span>{" "}
                 <span className="text-accentColor">+</span>
               </div>
-              <div className="dark:text-white text-sm">Users</div>
+              <div className="dark:text-white text-sm">Contributions</div>
             </div>
           </div>
         </div>
         <div className="w-full image-animation h-full flex justify-center">
-          <div className="relative w-[300px] h-[262px]">
+          <div className="relative w-[260px] h-[240px] lg:w-[300px] lg:h-[262px]">
             <div className="w-full h-full bg-accentColor shadow-md rounded-sm absolute -right-3 -bottom-3" />
             <Image
-              className="absolute z-10 shadow-sm rounded-sm"
+              className="absolute z-10 w-full h-full shadow-sm rounded-sm"
               width={300}
               height={262}
               priority
@@ -182,14 +182,28 @@ export default function AboutSection() {
         </div>
       </div>
 
+      <Backgrounds />
+    </section>
+  )
+}
+
+const Backgrounds = () => {
+  return (
+    <>
       {/* Triangle */}
-      <div className="absolute top-[25%] right-[17%]">
-        <Image width={30} height={30} alt="triangle" src={Triangle} />
+      <div className="absolute hidden lg:block top-[25%] right-[17%]">
+        <Image
+          className="pointer-events-auto select-none"
+          width={30}
+          height={30}
+          alt="triangle background"
+          src={Triangle}
+        />
       </div>
       {/* Triangle */}
 
       {/* Stars */}
-      <div className="absolute bottom-[12%] left-[8%]">
+      <div className="absolute hidden lg:block bottom-[14%] left-[9%]">
         <svg
           width="30"
           height="30"
@@ -210,13 +224,19 @@ export default function AboutSection() {
       {/* Stars */}
 
       {/* Circle */}
-      <div className="absolute bottom-[26%] right-[42%]">
-        <Image width={18} height={18} alt="" src={Circle} />
+      <div className="absolute hidden lg:block bottom-[26%] right-[42%]">
+        <Image
+          className="pointer-events-auto select-none"
+          width={18}
+          height={18}
+          alt="circle background"
+          src={Circle}
+        />
       </div>
       {/* Circle */}
 
       {/* Signs */}
-      <div className="absolute bottom-[20%] right-[15%]">
+      <div className="absolute hidden lg:block bottom-[30%] right-2 md:bottom-[20%] md:right-[15%]">
         <svg
           width="93"
           height="49"
@@ -233,7 +253,7 @@ export default function AboutSection() {
       {/* Signs */}
 
       {/* Alerts */}
-      <div className="absolute left-[9.5%] top-[18%]">
+      <div className="absolute hidden lg:block right-2 rotate-180 md:rotate-0 bottom-[60%] md:left-[9.5%] md:top-[18%]">
         <svg
           width="45"
           height="37"
@@ -248,28 +268,6 @@ export default function AboutSection() {
         </svg>
       </div>
       {/* Alerts */}
-    </section>
+    </>
   )
-}
-
-{
-  /* <script>
-let typeSplit = new SplitType('[animate]', {
-  types: 'lines, words, chars',
-  tagName: 'span'
-})
-
-gsap.from('[animate] .char', {
-  opacity: 0.3,
-  duration: 0.5,
-  ease: 'power1.out',
-  stagger: 0.1,
-  
-  scrollTrigger: {
-    trigger: '[animate]',
-    start: 'top center',
-    scrub: true
-  }
-})
-</script> */
 }
