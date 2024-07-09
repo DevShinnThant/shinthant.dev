@@ -6,7 +6,7 @@ const nextConfig = {
     //     removeConsole: true,
     // },
     images: {
-        domains: ['avatars.githubusercontent.com','static.wixstatic.com'],
+        domains: ['avatars.githubusercontent.com','static.wixstatic.com','assets-global.website-files.com'],
         
     },
 }

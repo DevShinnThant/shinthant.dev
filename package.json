@@ -28,6 +28,7 @@
     "react-lottie": "^1.2.4",
     "react-rough-notation": "^1.0.5",
     "sharp": "^0.33.4",
+    "split-type": "^0.3.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.1"
