@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section className="w-full min-h-screen bg-baseBackground pt-[4.5rem]">
       <Image
-        className="w-[38rem] absolute top-[7.5rem] md:top-[50%] left-[50%] -translate-x-1/2 md:-translate-y-1/2 select-none pointer-events-none"
+        className="w-[38rem] absolute top-[6.5rem] md:top-[50%] left-[50%] -translate-x-1/2 md:-translate-y-1/2 select-none pointer-events-none"
         alt="hero-background"
         src={HeroLines}
         aria-label="Hero Background Illustration"
