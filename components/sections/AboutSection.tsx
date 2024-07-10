@@ -109,7 +109,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative h-screen bg-[#161D1F] overflow-x-hidden py-14 px-[5%]"
+      className="relative h-full bg-[#161D1F] overflow-hidden py-14 px-10 lg:px-[5%]"
     >
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-24">
         <div className="relative title text-xl md:text-4xl tracking-tight font-medium w-fit dark:text-white">
