@@ -112,9 +112,9 @@ export default function AboutSection() {
       className="relative h-screen bg-[#161D1F] overflow-x-hidden py-14 px-[5%]"
     >
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-24">
-        <div className="relative text-xl md:text-4xl tracking-tight font-medium w-fit dark:text-white">
+        <div className="relative title text-xl md:text-4xl tracking-tight font-medium w-fit dark:text-white">
           Simplicity is the soul of efficiency.
-          <div className="absolute -right-[60px] top-2">
+          <div className="absolute -right-[10px] top-2">
             <Image
               className="w-14 pointer-events-none select-none"
               src={Signs}
@@ -124,9 +124,14 @@ export default function AboutSection() {
         </div>
         <div className="w-full flex flex-col-reverse md:flex-row items-center gap-20 md:gap-2 lg:gap-10">
           <div className="w-full flex flex-col items-start gap-7 md:gap-9">
-            <div className="title relative dark:text-accentColor text-3xl md:text-4xl font-medium">
-              About me
-              <div className="absolute z-50 -top-8 -left-[95%]">
+            <div className="relative">
+              <div className="overflow-hidden">
+                <div className="text-animation dark:text-accentColor text-3xl md:text-4xl font-medium">
+                  About me
+                </div>
+              </div>
+
+              <div className="absolute -top-6 -left-8">
                 <svg
                   width="45"
                   height="37"
