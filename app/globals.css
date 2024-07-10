@@ -132,6 +132,10 @@
     padding: 0.5rem 0;
   }
 
+  .navlink[data-active="true"]::after {
+    transform: scaleX(1);
+  }
+
   .navlink:hover {
     @apply dark:text-white;
   }

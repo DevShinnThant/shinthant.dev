@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import navlinks from "@/lib/navConfig"
+import { useSectionStore } from "@/store/section"
 import gsap from "gsap"
 import Link from "next/link"
 import ResumeBtn from "../ResumeBtn"
@@ -18,6 +19,8 @@ export default function Header() {
       { top: 0, duration: 0.7, delay: 2.2, ease: "Power0.easeNone" }
     )
   }, [])
+
+  const { section } = useSectionStore()
 
   return (
     <header
@@ -37,7 +40,12 @@ export default function Header() {
           <div className="col-span-4 hidden md:block m-auto">
             <div className="flex gap-[3rem] items-center">
               {navlinks.map((link) => (
-                <Link key={link.title} href={link.href} className="navlink">
+                <Link
+                  data-active={link.href === section}
+                  key={link.title}
+                  href={link.href}
+                  className="navlink"
+                >
                   {link.title}
                 </Link>
               ))}

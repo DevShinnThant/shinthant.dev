@@ -1,11 +1,13 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import useScrollActive from "@/hooks/useScrollActive"
 import Circle from "@/public/assets/about/circle.svg"
 import Signs from "@/public/assets/about/signs.svg"
 import Star from "@/public/assets/about/star.svg"
 import Triangle from "@/public/assets/about/triangle.svg"
 import ShinThantImage from "@/public/shin-thant.png"
+import { useSectionStore } from "@/store/section"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import Image from "next/image"
@@ -104,6 +106,16 @@ export default function AboutSection() {
       },
     })
   }, [])
+
+  // Set Active Session
+  const aboutSectionOnView = useScrollActive(sectionRef)
+  const { setSection } = useSectionStore()
+
+  console.log("render")
+
+  useEffect(() => {
+    aboutSectionOnView ? setSection("#about") : setSection("#home")
+  }, [aboutSectionOnView, setSection])
 
   return (
     <section

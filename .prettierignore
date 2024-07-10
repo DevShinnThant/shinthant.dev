@@ -4,6 +4,7 @@
 # Except these files & folders
 !/app
 !/components
+!/store
 !index.html
 !tailwind.config.ts
 !/providers
