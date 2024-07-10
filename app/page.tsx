@@ -5,7 +5,7 @@ import ProjectSection from "@/components/sections/ProjectSection"
 
 export default function Home() {
   return (
-    <main id="main">
+    <main id="main" className="scroll-smooth">
       <MouseSection />
       <HeroSection />
       <AboutSection />

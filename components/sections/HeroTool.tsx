@@ -4,21 +4,12 @@ import HeroSpinner from "@/public/assets/hero/hero-spinner.webp"
 import Source from "@/public/assets/hero/source.png"
 import heroLottieData from "@/public/assets/lottie/hero-lottie.json"
 import { gsap } from "gsap"
+import Lottie from "lottie-react"
 import Image from "next/image"
-import Lottie from "react-lottie"
 
 export default function HeroTool() {
   const firstSpinnerRef = useRef(null)
   const secondSpinnerRef = useRef(null)
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: heroLottieData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
 
   useEffect(() => {
     if (firstSpinnerRef.current && secondSpinnerRef.current) {
@@ -41,7 +32,7 @@ export default function HeroTool() {
       {/* Circle */}
       <div className="relative overflow-hidden xl:overflow-visible w-full h-[16rem] md:w-[27rem] md:h-[27rem] flex justify-center items-center">
         <div className="absolute hidden xl:block select-none pointer-events-none left-[-10rem] bottom-[3rem] rotate-270">
-          <Lottie options={defaultOptions} />
+          <Lottie animationData={heroLottieData} loop={true} />
         </div>
         <Image
           ref={firstSpinnerRef}

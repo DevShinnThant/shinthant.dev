@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react"
 import Circle from "@/public/assets/about/circle.svg"
+import Signs from "@/public/assets/about/signs.svg"
+import Star from "@/public/assets/about/star.svg"
 import Triangle from "@/public/assets/about/triangle.svg"
 import ShinThantImage from "@/public/shin-thant.png"
 import { gsap } from "gsap"
@@ -107,167 +109,462 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative bg-[#161D1F] overflow-x-hidden py-14 px-[5%] md:h-[740px] flex items-center justify-center"
+      className="relative h-screen bg-[#161D1F] overflow-x-hidden py-14 px-[5%]"
     >
-      <div className="w-full max-w-[1100px] flex flex-col-reverse md:flex-row items-center gap-20 md:gap-2 lg:gap-10">
-        <div className="w-full flex flex-col gap-7 md:gap-9 ">
-          <div className="title dark:text-accentColor text-3xl md:text-4xl font-medium">
-            About me
-          </div>
-
-          <div className="flex flex-col items-start gap-4">
-            <div className="overflow-hidden">
-              <div className="dark:text-white text-animation">
-                With over 2 years of experience as a frontend developer, I
-                specialize in crafting responsive and user-friendly web
-                applications. I excel in creating intuitive interfaces and enjoy
-                working in collaborative, agile environments.
-              </div>
-            </div>
-
-            <div className="overflow-hidden">
-              <div className="dark:text-white text-animation">
-                My Educational background.
-              </div>
-            </div>
-            <div className="flex gap-1 flex-col items-start">
-              <div className="text-accentColor">NCC Education</div>
-              <div className="overflow-hidden">
-                <div className="dark:text-white text-animation">
-                  Joined Level 3 Program to embark on an enriching educational
-                  journey designed to build a solid foundation in key subjects.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full border-t-accentColor py-5 border-b-accentColor border-t-[0.01px] border-b-[0.01px] flex items-center gap-6 md:gap-6 lg:gap-20">
-            <div className="flex flex-col items-center">
-              <div className="text-3xl md:text-4xl font-medium dark:text-white">
-                <span className="experience-count">0</span>{" "}
-                <span className="text-accentColor">+</span>
-              </div>
-              <div className="dark:text-white text-sm">Experiences</div>
-            </div>
-
-            <div className="flex flex-col font-medium items-center">
-              <div className="text-3xl md:text-4xl dark:text-white">
-                <span className="project-count">0</span>{" "}
-                <span className="text-accentColor">+</span>
-              </div>
-              <div className="dark:text-white text-sm">Completed Projects</div>
-            </div>
-
-            <div className="flex flex-col font-medium items-center">
-              <div className="text-3xl md:text-4xl dark:text-white">
-                <span className="user-count">0</span>{" "}
-                <span className="text-accentColor">+</span>
-              </div>
-              <div className="dark:text-white text-sm">Contributions</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full image-animation h-full flex justify-center">
-          <div className="relative w-[260px] h-[240px] lg:w-[300px] lg:h-[262px]">
-            <div className="w-full h-full bg-accentColor shadow-md rounded-sm absolute -right-3 -bottom-3" />
+      <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-24">
+        <div className="relative text-xl md:text-4xl tracking-tight font-medium w-fit dark:text-white">
+          Simplicity is the soul of efficiency.
+          <div className="absolute -right-[60px] top-2">
             <Image
-              className="absolute z-10 w-full h-full shadow-sm rounded-sm"
-              width={300}
-              height={262}
-              priority
-              alt="shin thant's profile"
-              src={ShinThantImage}
+              className="w-14 pointer-events-none select-none"
+              src={Signs}
+              alt="signs"
             />
           </div>
         </div>
-      </div>
+        <div className="w-full flex flex-col-reverse md:flex-row items-center gap-20 md:gap-2 lg:gap-10">
+          <div className="w-full flex flex-col items-start gap-7 md:gap-9">
+            <div className="title relative dark:text-accentColor text-3xl md:text-4xl font-medium">
+              About me
+              <div className="absolute z-50 -top-8 -left-[95%]">
+                <svg
+                  width="45"
+                  height="37"
+                  viewBox="0 0 45 37"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.807 19.086c-.485-.764-.744-1.319-1.136-1.76a815.404 815.404 0 00-7.627-8.56 4.462 4.462 0 00-1.429-1.06c-.352-.16-1.016-.182-1.22.033-.3.32-.508.962-.396 1.37.165.624.57 1.226.99 1.737 2.52 3.07 5.081 6.113 7.626 9.161.143.17.302.337.475.48.6.508 1.352.985 1.995.37.447-.429.524-1.245.722-1.771zM36.215 9.964c.25 1.018.476 2.041.759 3.053.232.816.832 1.255 1.674 1.21.847-.046 1.371-.582 1.568-1.378.105-.425.176-.914.07-1.328-.645-2.533-1.341-5.05-2.03-7.57-.056-.212-.147-.491-.309-.587-.54-.323-1.14-.827-1.688-.8-.86.045-1.203.871-1.13 1.67.104 1.114.322 2.221.534 3.322.155.806.384 1.601.577 2.404l-.027.009.002-.005zM7.28 28.081c-.22.298-.737.71-.825 1.2-.072.394.287.96.603 1.313.28.309.746.487 1.164.633 1.967.697 3.947 1.363 5.921 2.04.21.071.43.13.65.167.981.166 1.984.278 2.601-.72.457-.732-.07-1.93-1.239-2.553-2.395-1.274-4.98-1.97-7.69-2.171-.295-.021-.595.046-1.183.095l-.001-.004z"
+                    fill="#ffffff"
+                  ></path>
+                </svg>
+              </div>
+            </div>
 
-      <Backgrounds />
+            <div className="flex flex-col items-start gap-4">
+              <div className="overflow-hidden">
+                <div className="dark:text-white text-animation">
+                  With over 2 years of experience as a frontend developer, I
+                  specialize in crafting responsive and user-friendly web
+                  applications. I excel in creating intuitive interfaces and
+                  enjoy working in collaborative, agile environments.
+                </div>
+              </div>
+
+              <div className="overflow-hidden">
+                <div className="dark:text-white text-animation">
+                  My Educational background.
+                </div>
+              </div>
+              <div className="flex gap-1 flex-col items-start">
+                <div className="text-accentColor">NCC Education</div>
+                <div className="overflow-hidden">
+                  <div className="dark:text-white text-animation">
+                    Joined Level 3 Program to embark on an enriching educational
+                    journey designed to build a solid foundation in key
+                    subjects.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full border-t-accentColor py-5 border-b-accentColor border-t-[0.01px] border-b-[0.01px] flex items-center gap-6 md:gap-6 lg:gap-20">
+              <div className="flex flex-col items-center">
+                <div className="text-3xl md:text-4xl font-medium dark:text-white">
+                  <span className="experience-count">0</span>{" "}
+                  <span className="text-accentColor">+</span>
+                </div>
+                <div className="dark:text-white text-sm">Experiences</div>
+              </div>
+
+              <div className="flex flex-col font-medium items-center">
+                <div className="text-3xl md:text-4xl dark:text-white">
+                  <span className="project-count">0</span>{" "}
+                  <span className="text-accentColor">+</span>
+                </div>
+                <div className="dark:text-white text-sm">
+                  Completed Projects
+                </div>
+              </div>
+
+              <div className="flex flex-col font-medium items-center">
+                <div className="text-3xl md:text-4xl dark:text-white">
+                  <span className="user-count">0</span>{" "}
+                  <span className="text-accentColor">+</span>
+                </div>
+                <div className="dark:text-white text-sm">Contributions</div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-full flex justify-center items-center image-animation ">
+            <div className="relative w-[260px] h-[240px] lg:w-[300px] lg:h-[262px]">
+              <div className="w-full h-full bg-accentColor shadow-md rounded-sm absolute -right-3 -bottom-3" />
+              <Image
+                className="absolute z-10 w-full h-full shadow-sm rounded-sm"
+                width={300}
+                height={262}
+                priority
+                alt="shin thant's profile"
+                src={ShinThantImage}
+              />
+
+              <div className="absolute hidden lg:block -top-12 -right-12">
+                <Image
+                  className="pointer-events-auto select-none"
+                  width={26}
+                  height={26}
+                  alt="triangle background"
+                  src={Triangle}
+                />
+              </div>
+
+              <div className="absolute hidden lg:block -bottom-14 -right-10">
+                <Image
+                  className="pointer-events-auto select-none"
+                  width={22}
+                  height={22}
+                  alt="circle background"
+                  src={Circle}
+                />
+              </div>
+
+              <div className="absolute hidden lg:block -bottom-16 -left-10">
+                <Image
+                  className="pointer-events-auto select-none"
+                  width={34}
+                  height={34}
+                  alt="star background"
+                  src={Star}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <TechStack />
+      </div>
     </section>
   )
 }
 
-const Backgrounds = () => {
+const TechStack = () => {
   return (
-    <>
-      {/* Triangle */}
-      <div className="absolute hidden lg:block top-[25%] right-[17%]">
-        <Image
-          className="pointer-events-auto select-none"
-          width={30}
-          height={30}
-          alt="triangle background"
-          src={Triangle}
-        />
-      </div>
-      {/* Triangle */}
+    <div className="w-full inline-flex gap-20 flex-nowrap lg:overflow-hidden">
+      <div className="flex items-center gap-20 justify-center animate-infinite-scroll">
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 17.5c.32 .32 .754 .5 1.207 .5h.543c.69 0 1.25 -.56 1.25 -1.25v-.25a1.5 1.5 0 0 0 -1.5 -1.5a1.5 1.5 0 0 1 -1.5 -1.5v-.25c0 -.69 .56 -1.25 1.25 -1.25h.543c.453 0 .887 .18 1.207 .5" />
+            <path d="M9 12h4" />
+            <path d="M11 12v6" />
+            <path d="M21 19v-14a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2 -2z" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">TypeScript</div>
+        </div>
 
-      {/* Stars */}
-      <div className="absolute hidden lg:block bottom-[14%] left-[9%]">
-        <svg
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M17.5 15l.625 1.875L20 17.5l-1.875.625L17.5 20l-.625-1.875L15 17.5l1.875-.625L17.5 15zM6 17l.25.75L7 18l-.75.25L6 19l-.25-.75L5 18l.75-.25L6 17zM11 4l1.5 4.5L17 10l-4.5 1.5L11 16l-1.5-4.5L5 10l4.5-1.5L11 4z"
-            stroke="#5550FF"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path>
-        </svg>
-      </div>
-      {/* Stars */}
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102" />
+            <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" />
+            <path d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2" />
+            <path d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2" />
+            <path d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896" />
+            <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897" />
+            <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">React</div>
+        </div>
 
-      {/* Circle */}
-      <div className="absolute hidden lg:block bottom-[26%] right-[42%]">
-        <Image
-          className="pointer-events-auto select-none"
-          width={18}
-          height={18}
-          alt="circle background"
-          src={Circle}
-        />
-      </div>
-      {/* Circle */}
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993" />
+            <path d="M15 12v-3" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">Next</div>
+        </div>
 
-      {/* Signs */}
-      <div className="absolute hidden lg:block bottom-[30%] right-2 md:bottom-[20%] md:right-[15%]">
-        <svg
-          width="93"
-          height="49"
-          viewBox="0 0 93 49"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M92.91 4.63c-.275.597-.509 1.214-.83 1.784-2.077 3.665-4.74 6.865-8.02 9.491a12.334 12.334 0 01-4.118 2.157c-2.67.786-4.645-.776-4.64-3.563.002-1.415.349-2.838.582-4.25.188-1.118.444-2.228.329-3.603-.584.403-1.214.753-1.752 1.215-3.57 3.072-7.157 6.128-10.673 9.26-4.895 4.357-9.71 8.807-14.615 13.152-1.631 1.444-3.411 2.725-5.176 4.006-.71.516-1.526.94-2.357 1.212-1.93.628-3.478-.41-3.55-2.448-.04-1.065.15-2.192.482-3.21.821-2.533 1.794-5.013 2.683-7.526 1.708-4.827 3.45-9.644 5.059-14.507.548-1.657.73-3.432 1.08-5.156l-.404-.3c-.68.368-1.435.642-2.023 1.117-2.124 1.714-4.264 3.42-6.269 5.269-9.669 8.898-18.397 18.678-26.828 28.737-2.327 2.774-4.592 5.601-6.905 8.383-.608.734-1.28 1.418-1.964 2.087-.516.51-1.154.874-1.783.222-.561-.577-.164-1.125.239-1.623.73-.903 1.473-1.795 2.183-2.712 8.823-11.431 18.442-22.151 28.806-32.196 3.33-3.229 6.886-6.226 10.415-9.236C43.88 1.523 45.108.82 46.35.304c1.552-.647 2.741.033 3.042 1.69.191 1.05.231 2.204.022 3.243-.555 2.742-1.135 5.49-1.976 8.154-1.502 4.752-3.213 9.44-4.817 14.16-.479 1.413-.894 2.842-1.032 4.59.597-.34 1.244-.614 1.781-1.032 2.16-1.668 4.35-3.306 6.41-5.092 7.329-6.347 14.6-12.76 21.917-19.122 1.182-1.03 2.455-1.955 3.714-2.889.905-.67 1.908-1.168 3.037-.542 1.113.614 1.28 1.746 1.235 2.849-.057 1.426-.268 2.85-.424 4.273-.131 1.212-.283 2.422-.432 3.698 1.11.357 1.869-.136 2.532-.667 1.439-1.146 2.826-2.355 4.212-3.569 1.794-1.573 3.553-3.192 5.361-4.746.478-.41 1.09-.665 1.641-.99l.323.314.013.004z"
-            fill="#5550FF"
-          ></path>
-        </svg>
-      </div>
-      {/* Signs */}
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+            <path d="M7.5 8h3v8l-2 -1" />
+            <path d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">JavaScript</div>
+        </div>
 
-      {/* Alerts */}
-      <div className="absolute hidden lg:block right-2 rotate-180 md:rotate-0 bottom-[60%] md:left-[9.5%] md:top-[18%]">
-        <svg
-          width="45"
-          height="37"
-          viewBox="0 0 45 37"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M25.807 19.086c-.485-.764-.744-1.319-1.136-1.76a815.404 815.404 0 00-7.627-8.56 4.462 4.462 0 00-1.429-1.06c-.352-.16-1.016-.182-1.22.033-.3.32-.508.962-.396 1.37.165.624.57 1.226.99 1.737 2.52 3.07 5.081 6.113 7.626 9.161.143.17.302.337.475.48.6.508 1.352.985 1.995.37.447-.429.524-1.245.722-1.771zM36.215 9.964c.25 1.018.476 2.041.759 3.053.232.816.832 1.255 1.674 1.21.847-.046 1.371-.582 1.568-1.378.105-.425.176-.914.07-1.328-.645-2.533-1.341-5.05-2.03-7.57-.056-.212-.147-.491-.309-.587-.54-.323-1.14-.827-1.688-.8-.86.045-1.203.871-1.13 1.67.104 1.114.322 2.221.534 3.322.155.806.384 1.601.577 2.404l-.027.009.002-.005zM7.28 28.081c-.22.298-.737.71-.825 1.2-.072.394.287.96.603 1.313.28.309.746.487 1.164.633 1.967.697 3.947 1.363 5.921 2.04.21.071.43.13.65.167.981.166 1.984.278 2.601-.72.457-.732-.07-1.93-1.239-2.553-2.395-1.274-4.98-1.97-7.69-2.171-.295-.021-.595.046-1.183.095l-.001-.004z"
-            fill="#ffffff"
-          ></path>
-        </svg>
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">Tailwind</div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5.308 7.265l5.385 -3.029" />
+            <path d="M13.308 4.235l5.384 3.03" />
+            <path d="M20 9.5v5" />
+            <path d="M18.693 16.736l-5.385 3.029" />
+            <path d="M10.692 19.765l-5.384 -3.03" />
+            <path d="M4 14.5v-5" />
+            <path d="M12.772 4.786l6.121 10.202" />
+            <path d="M18.5 16h-13" />
+            <path d="M5.107 14.988l6.122 -10.201" />
+            <path d="M12 3.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M12 20.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M4 8m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M4 16m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M20 16m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M20 8m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">GrapQL</div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4.53 17.05l6.15 -11.72h-.02c.38 -.74 1.28 -1.02 2.01 -.63c.26 .14 .48 .36 .62 .62l1.06 2.01" />
+            <path d="M15.47 6.45c.58 -.59 1.53 -.59 2.11 -.01c.22 .22 .36 .5 .41 .81l1.5 9.11c.1 .62 -.2 1.24 -.76 1.54l-6.07 2.9c-.46 .25 -1.01 .26 -1.46 0l-6.02 -2.92c-.55 -.31 -.85 -.92 -.75 -1.54l1.96 -12.04c.12 -.82 .89 -1.38 1.7 -1.25c.46 .07 .87 .36 1.09 .77l1.24 1.76" />
+            <path d="M4.57 17.18l10.93 -10.68" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">Firebase</div>
+        </div>
       </div>
-      {/* Alerts */}
-    </>
+
+      <div
+        className="flex items-center gap-20 justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        aria-hidden="true"
+      >
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 17.5c.32 .32 .754 .5 1.207 .5h.543c.69 0 1.25 -.56 1.25 -1.25v-.25a1.5 1.5 0 0 0 -1.5 -1.5a1.5 1.5 0 0 1 -1.5 -1.5v-.25c0 -.69 .56 -1.25 1.25 -1.25h.543c.453 0 .887 .18 1.207 .5" />
+            <path d="M9 12h4" />
+            <path d="M11 12v6" />
+            <path d="M21 19v-14a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2 -2z" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">TypeScript</div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102" />
+            <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" />
+            <path d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2" />
+            <path d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2" />
+            <path d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896" />
+            <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897" />
+            <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">React</div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993" />
+            <path d="M15 12v-3" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">Next</div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+            <path d="M7.5 8h3v8l-2 -1" />
+            <path d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">JavaScript</div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">Tailwind</div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5.308 7.265l5.385 -3.029" />
+            <path d="M13.308 4.235l5.384 3.03" />
+            <path d="M20 9.5v5" />
+            <path d="M18.693 16.736l-5.385 3.029" />
+            <path d="M10.692 19.765l-5.384 -3.03" />
+            <path d="M4 14.5v-5" />
+            <path d="M12.772 4.786l6.121 10.202" />
+            <path d="M18.5 16h-13" />
+            <path d="M5.107 14.988l6.122 -10.201" />
+            <path d="M12 3.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M12 20.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M4 8m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M4 16m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M20 16m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+            <path d="M20 8m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">GrapQL</div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#ffffff"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4.53 17.05l6.15 -11.72h-.02c.38 -.74 1.28 -1.02 2.01 -.63c.26 .14 .48 .36 .62 .62l1.06 2.01" />
+            <path d="M15.47 6.45c.58 -.59 1.53 -.59 2.11 -.01c.22 .22 .36 .5 .41 .81l1.5 9.11c.1 .62 -.2 1.24 -.76 1.54l-6.07 2.9c-.46 .25 -1.01 .26 -1.46 0l-6.02 -2.92c-.55 -.31 -.85 -.92 -.75 -1.54l1.96 -12.04c.12 -.82 .89 -1.38 1.7 -1.25c.46 .07 .87 .36 1.09 .77l1.24 1.76" />
+            <path d="M4.57 17.18l10.93 -10.68" />
+          </svg>
+          <div className="dark:text-white text-lg font-medium">Firebase</div>
+        </div>
+      </div>
+    </div>
   )
 }
