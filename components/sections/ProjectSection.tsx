@@ -70,7 +70,7 @@ export default function ProjectSection() {
       />
 
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-14">
-        <div className="w-full flex absolute left-1/2 -translate-x-1/2 flex-col gap-8 items-center">
+        <div className="w-[80%] md:w-full flex absolute left-1/2 -translate-x-1/2 flex-col gap-8 items-center">
           <RoughNotation
             type="underline"
             strokeWidth={2}
@@ -83,7 +83,7 @@ export default function ProjectSection() {
             </div>
           </RoughNotation>
           <div className="overflow-hidden">
-            <div className="qoutes-animation w-[80%] md:w-full text-center  flex flex-col items-center font-normal">
+            <div className="qoutes-animation  md:w-full text-center  flex flex-col items-center font-normal">
               <div>Good design is obvious. Great design is transparent.</div>
               <div>Design is not for philosophy, it&apos;s for life.</div>
             </div>
