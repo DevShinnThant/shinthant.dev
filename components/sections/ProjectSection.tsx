@@ -57,7 +57,7 @@ export default function ProjectSection() {
       <Image
         src={Background}
         alt="project-section-background"
-        className="w-[95%] top-0 h-full absolute overflow-hidden"
+        className="w-[95%] top-0 h-full absolute overflow-hidden pointer-events-none select-none"
       />
 
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-14">
@@ -69,21 +69,16 @@ export default function ProjectSection() {
             order={1}
             show={isSectionOnView}
           >
-            <div className="text-xl md:text-4xl tracking-tight font-medium w-fit dark:text-accentColor">
-              Projects
+            <div className="text-xl absolute z-10 left-[50%] -translate-x-1/2 md:text-4xl tracking-tight font-medium w-fit dark:text-accentColor">
+              Featured Projects
             </div>
           </RoughNotation>
-          <div className="flex flex-col items-center">
-            <div className="font-normal">
-              Good design is obvious. Great design is transparent
-            </div>
-
-            <div className="font-normal">
-              Design is not for philosophy, it&apos;s for life
-            </div>
+          <div className="absolute w-[80%] text-center top-24 md:top-28 z-10 left-[50%] -translate-x-1/2 flex flex-col items-center font-normal">
+            <div>Good design is obvious. Great design is transparent.</div>
+            <div>Design is not for philosophy, it&apos;s for life.</div>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="w-full pt-[30%] md:pt-[10%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project) => (
             <ProjectCard key={project.id} item={project} />
           ))}
@@ -132,7 +127,7 @@ const projects: Project[] = [
     techStacks: ["NextJS", "Strapi", "Radix UI"],
     image: Music,
     githubURL: "https://github.com/ShinnTNT/music-player",
-    githubApi: "https://api.github.com/repos/ShinnTNT/music-playe",
+    githubApi: "https://api.github.com/repos/ShinnTNT/music-player",
   },
   {
     id: 4,
@@ -151,7 +146,7 @@ const projects: Project[] = [
       "A refined and enhanced showcase of my work, designed to highlight my skills and projects with a sleek and modern interface.",
     techStacks: ["NextJS", "ShadnUI", "GSAP"],
     image: PortfolioV2,
-    githubURL: "https://github.com/ShinnTNT/shinthant.dev",
+    githubURL: "",
     githubApi: "https://api.github.com/repos/ShinnTNT/shinthant.dev",
   },
   {

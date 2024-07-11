@@ -9,10 +9,11 @@ interface Props {
 }
 
 export default function ProjectCard({ item }: Props) {
-  const [starCount, setStarCount] = useState()
+  const [starCount, setStarCount] = useState<number>(0)
 
   useEffect(() => {
     let ignore = false
+    if (!item.githubApi) return
     async function fetchData() {
       const response = await fetch(item.githubApi)
       const data = await response.json()
@@ -25,7 +26,7 @@ export default function ProjectCard({ item }: Props) {
     }
 
     fetchData()
-    ;() => {
+    return () => {
       ignore = true
     }
   }, [item.githubApi])
