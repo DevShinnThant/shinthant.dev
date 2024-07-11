@@ -1,6 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import Image from "next/image"
 import { Project } from "./sections/ProjectSection"
 
@@ -9,7 +11,47 @@ interface Props {
 }
 
 export default function ProjectCard({ item }: Props) {
+  const cardRef = useRef<HTMLDivElement>(null)
   const [starCount, setStarCount] = useState<number>(0)
+
+  // Animations
+  useEffect(() => {
+    const q = gsap.utils.selector(cardRef)
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: cardRef.current,
+        start: `70% bottom`,
+      },
+    })
+
+    // tl.fromTo(
+    //   q(".project-image"),
+    //   { opacity: 0, y: 100 },
+    //   {
+    //     opacity: 1,
+    //     y: 0,
+    //     ease: "Power3.easeInOut",
+    //     duration: 0.5,
+    //     stagger: 0.2,
+    //   }
+    // )
+    //   .fromTo(q(".project-text"), { y: 100 }, { y: 0, stagger: 0.2 }, "<25%")
+    //   .fromTo(
+    //     q(".project-desc"),
+    //     { opacity: 0 },
+    //     { opacity: 1, stagger: 0.2 },
+    //     "<10%"
+    //   )
+    //   .fromTo(
+    //     q(".project-tags"),
+    //     { y: -40 },
+    //     { y: 0, stagger: 0.1, ease: "Elastic.easeOut" },
+    //     "<25%"
+    //   )
+  }, [])
 
   useEffect(() => {
     let ignore = false
@@ -32,7 +74,10 @@ export default function ProjectCard({ item }: Props) {
   }, [item.githubApi])
 
   return (
-    <div className="relative overflow-hidden col-span-1 w-full flex flex-col shadow-sm border rounded-[0.75rem] h-[380px]">
+    <div
+      ref={cardRef}
+      className="relative overflow-hidden col-span-1 w-full flex flex-col shadow-sm border rounded-[0.75rem] h-[380px]"
+    >
       <Image alt={item.title} src={item.image} />
 
       <div className="flex-1  group relative after:content-[''] after:rounded-full after:absolute after:content after:z-[10] after:w-[32px] after:h-[32px] after:bg-accentColor after:scale-[1] after:bottom-[-24px] after:right-[-24px] after:origin-center after:transition-transform after:duration-500 after:ease-out hover:after:scale-[25] overflow-hidden p-4 flex flex-col items-start justify-between">

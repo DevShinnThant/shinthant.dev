@@ -61,7 +61,7 @@ export default function ProjectSection() {
       />
 
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-14">
-        <div className="flex flex-col gap-8 items-center">
+        <div className="w-full flex absolute left-1/2 -translate-x-1/2 flex-col gap-8 items-center">
           <RoughNotation
             type="underline"
             strokeWidth={2}
@@ -69,16 +69,16 @@ export default function ProjectSection() {
             order={1}
             show={isSectionOnView}
           >
-            <div className="text-xl absolute z-10 left-[50%] -translate-x-1/2 md:text-4xl tracking-tight font-medium w-fit dark:text-accentColor">
+            <div className="text-xl md:text-4xl tracking-tight font-medium w-fit dark:text-accentColor">
               Featured Projects
             </div>
           </RoughNotation>
-          <div className="absolute w-[80%] text-center top-24 md:top-28 z-10 left-[50%] -translate-x-1/2 flex flex-col items-center font-normal">
+          <div className=" w-[80%] md:w-full text-center  flex flex-col items-center font-normal">
             <div>Good design is obvious. Great design is transparent.</div>
             <div>Design is not for philosophy, it&apos;s for life.</div>
           </div>
         </div>
-        <div className="w-full pt-[30%] md:pt-[10%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="w-full pt-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project) => (
             <ProjectCard key={project.id} item={project} />
           ))}
@@ -147,7 +147,7 @@ const projects: Project[] = [
     techStacks: ["NextJS", "ShadnUI", "GSAP"],
     image: PortfolioV2,
     githubURL: "",
-    githubApi: "https://api.github.com/repos/ShinnTNT/shinthant.dev",
+    githubApi: "",
   },
   {
     id: 6,
