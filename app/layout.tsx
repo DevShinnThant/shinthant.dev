@@ -10,6 +10,13 @@ const jost = Jost({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "ShinThant.Dev",
   description: "A Frontend Developer",
+  applicationName: "Portfolio",
+  authors: {
+    name: "Shin Thant",
+  },
+  generator: "NextJs",
+  keywords: ["NextJS", "Portfolio", "GSAP", "ShadcnUI"],
+  creator: "Shin Thant",
   icons: {
     icon: "/favicon.png",
   },
@@ -23,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jost.className}>
-        {/* <Loader /> */}
+        <Loader />
 
         <ThemeProvider
           attribute="class"
