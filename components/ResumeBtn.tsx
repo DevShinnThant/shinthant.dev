@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { cn } from "@/lib/utils"
+import { useSectionStore } from "@/store/section"
 import { gsap } from "gsap"
 
 export default function ResumeBtn() {
@@ -63,6 +65,7 @@ export default function ResumeBtn() {
     }
   }, [])
 
+  const { section } = useSectionStore()
   return (
     <a
       role="button"
@@ -89,7 +92,12 @@ export default function ResumeBtn() {
         ref={leftTween}
         className="absolute bottom-[-100%] left-0 h-full w-[1px] bg-[linear-gradient(360deg,transparent,hsl(var(--accent-color)))]"
       />
-      <div className="text-xs group-hover:text-white text-accentColor dark:text-gray-300">
+      <div
+        className={cn(
+          "text-xs group-hover:text-white text-accentColor dark:text-gray-300",
+          section === "#project" && "dark:text-black"
+        )}
+      >
         Resume
       </div>
     </a>

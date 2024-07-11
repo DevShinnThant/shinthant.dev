@@ -2,7 +2,9 @@
 
 import { useEffect, useRef } from "react"
 import navlinks from "@/lib/navConfig"
+import { cn } from "@/lib/utils"
 import { useSectionStore } from "@/store/section"
+import clsx from "clsx"
 import gsap from "gsap"
 import Link from "next/link"
 import ResumeBtn from "../ResumeBtn"
@@ -31,7 +33,12 @@ export default function Header() {
         <div className="w-full grid items-center grid-cols-8 md:grid-cols-12">
           <div className="col-span-4">
             <Link href="/" className="text-xl">
-              <span className="dark:text-white hover:text-accentColor cursor-pointer">
+              <span
+                className={cn(
+                  "dark:text-white hover:text-accentColor cursor-pointer",
+                  section === "#project" && "dark:text-black"
+                )}
+              >
                 ShinThant
               </span>
               <span className="text-accentColor font-bold">.dev</span>
@@ -44,7 +51,10 @@ export default function Header() {
                   data-active={link.href === section}
                   key={link.title}
                   href={link.href}
-                  className="navlink"
+                  className={cn(
+                    "navlink",
+                    section === "#project" && "dark:text-black"
+                  )}
                 >
                   {link.title}
                 </Link>

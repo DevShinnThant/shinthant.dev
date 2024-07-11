@@ -111,8 +111,6 @@ export default function AboutSection() {
   const aboutSectionOnView = useScrollActive(sectionRef)
   const { setSection } = useSectionStore()
 
-  console.log("render")
-
   useEffect(() => {
     aboutSectionOnView ? setSection("#about") : setSection("#home")
   }, [aboutSectionOnView, setSection])
