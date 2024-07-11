@@ -14,10 +14,7 @@ export default function ProjectCard({ item }: Props) {
   const cardRef = useRef<HTMLDivElement>(null)
   const [starCount, setStarCount] = useState<number>(0)
 
-  // Animations
   useEffect(() => {
-    const q = gsap.utils.selector(cardRef)
-
     gsap.registerPlugin(ScrollTrigger)
 
     const tl = gsap.timeline({
@@ -27,30 +24,16 @@ export default function ProjectCard({ item }: Props) {
       },
     })
 
-    // tl.fromTo(
-    //   q(".project-image"),
-    //   { opacity: 0, y: 100 },
-    //   {
-    //     opacity: 1,
-    //     y: 0,
-    //     ease: "Power3.easeInOut",
-    //     duration: 0.5,
-    //     stagger: 0.2,
-    //   }
-    // )
-    //   .fromTo(q(".project-text"), { y: 100 }, { y: 0, stagger: 0.2 }, "<25%")
-    //   .fromTo(
-    //     q(".project-desc"),
-    //     { opacity: 0 },
-    //     { opacity: 1, stagger: 0.2 },
-    //     "<10%"
-    //   )
-    //   .fromTo(
-    //     q(".project-tags"),
-    //     { y: -40 },
-    //     { y: 0, stagger: 0.1, ease: "Elastic.easeOut" },
-    //     "<25%"
-    //   )
+    tl.fromTo(
+      cardRef.current,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        ease: "power1.inOut",
+      }
+    )
   }, [])
 
   useEffect(() => {

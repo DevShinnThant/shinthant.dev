@@ -24,7 +24,7 @@ export default function ProjectSection() {
   const [isSectionOnView, setIsSectionOnView] = useState<boolean>(false)
 
   useEffect(() => {
-    // const q = gsap.utils.selector(sectionRef)
+    const q = gsap.utils.selector(sectionRef)
 
     gsap.timeline({
       scrollTrigger: {
@@ -32,6 +32,15 @@ export default function ProjectSection() {
         scrub: true,
         onEnter: () => {
           setIsSectionOnView(true)
+          gsap.fromTo(
+            q(".qoutes-animation"),
+            {
+              y: "-200%",
+            },
+            {
+              y: 0,
+            }
+          )
         },
         onLeave: () => {
           setIsSectionOnView(false)
@@ -73,9 +82,11 @@ export default function ProjectSection() {
               Featured Projects
             </div>
           </RoughNotation>
-          <div className=" w-[80%] md:w-full text-center  flex flex-col items-center font-normal">
-            <div>Good design is obvious. Great design is transparent.</div>
-            <div>Design is not for philosophy, it&apos;s for life.</div>
+          <div className="overflow-hidden">
+            <div className="qoutes-animation w-[80%] md:w-full text-center  flex flex-col items-center font-normal">
+              <div>Good design is obvious. Great design is transparent.</div>
+              <div>Design is not for philosophy, it&apos;s for life.</div>
+            </div>
           </div>
         </div>
         <div className="w-full pt-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
