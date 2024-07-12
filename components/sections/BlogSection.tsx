@@ -9,7 +9,9 @@ import SpaceCat from "@/public/assets/blog/space-cat.webp"
 import { useSectionStore } from "@/store/section"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import { ArrowRight } from "iconsax-react"
 import { StaticImageData } from "next/image"
+import Link from "next/link"
 import { RoughNotation } from "react-rough-notation"
 import BlogCard from "../BlogCard"
 
@@ -69,7 +71,7 @@ export default function BlogSection() {
               Blog
             </div>
           </RoughNotation>
-          <div ref={elementRef} className="overflow-hidden flex flex-col gap-2">
+          <div ref={elementRef} className="overflow-hidden flex flex-col gap-1">
             <div className="qoutes-animation mx-auto text-center text-sm text-white flex flex-col items-center font-normal">
               I document my journey by writing blog posts about my projects and
               experiences.
@@ -85,6 +87,19 @@ export default function BlogSection() {
             <BlogCard key={blog.id} item={blog} />
           ))}
         </div>
+
+        <Link
+          href={"https://medium.com/@shinthantequi"}
+          target="_blank"
+          aria-label="Follow up on my medium account"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2"
+        >
+          <div className="text-accentColor navlink text-sm italic">
+            Follow up on my medium
+          </div>
+          <ArrowRight color="white" size={15} />
+        </Link>
       </div>
     </section>
   )

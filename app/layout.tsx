@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jost.className}>
-        {/* <Loader /> */}
+        <Loader />
 
         <ThemeProvider
           attribute="class"
