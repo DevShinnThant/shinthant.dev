@@ -51,7 +51,7 @@ export default function BlogCard({ item }: Props) {
           <Image
             width={140}
             height={120}
-            className="h-[120px] w-full md:w-[140px] transition-all group-hover:contrast-125 rounded-md"
+            className="h-full md:h-[120px] w-full md:w-[140px] transition-all group-hover:contrast-125 rounded-md"
             src={item.image}
             alt={item.title}
           />
