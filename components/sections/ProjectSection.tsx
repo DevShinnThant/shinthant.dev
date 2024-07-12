@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import useOnScreen from "@/hooks/useOnScreen"
 import useScrollActive from "@/hooks/useScrollActive"
 import Background from "@/public/assets/backgrounds/project-bg.webp"
 import ComingSoon from "@/public/assets/projects/coming-soon.png"
@@ -21,7 +22,8 @@ export default function ProjectSection() {
 
   const sectionRef = useRef(null)
 
-  const [isSectionOnView, setIsSectionOnView] = useState<boolean>(false)
+  const elementRef = useRef<HTMLDivElement>(null)
+  const isOnScreen = useOnScreen(elementRef)
 
   useEffect(() => {
     const q = gsap.utils.selector(sectionRef)
@@ -31,7 +33,6 @@ export default function ProjectSection() {
         trigger: sectionRef.current,
         scrub: true,
         onEnter: () => {
-          setIsSectionOnView(true)
           gsap.fromTo(
             q(".qoutes-animation"),
             {
@@ -41,9 +42,6 @@ export default function ProjectSection() {
               y: 0,
             }
           )
-        },
-        onLeave: () => {
-          setIsSectionOnView(false)
         },
       },
     })
@@ -76,13 +74,13 @@ export default function ProjectSection() {
             strokeWidth={2}
             color="hsl(157, 87%, 41%)"
             order={1}
-            show={isSectionOnView}
+            show={isOnScreen}
           >
             <div className="text-xl md:text-4xl tracking-tight font-medium w-fit dark:text-accentColor">
               Featured Projects
             </div>
           </RoughNotation>
-          <div className="overflow-hidden">
+          <div ref={elementRef} className="overflow-hidden">
             <div className="qoutes-animation  md:w-full text-center  flex flex-col items-center font-normal">
               <div>Good design is obvious. Great design is transparent.</div>
               <div>Design is not for philosophy, it&apos;s for life.</div>
