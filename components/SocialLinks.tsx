@@ -30,7 +30,7 @@ export default function SocialLinks() {
             writingMode: "vertical-lr",
           }}
           aria-label="blog"
-          className="flex text-xs group-hover:text-accentColor font-thin tracking-[0.3em] items-center gap-2 dark:text-gray-400"
+          className="flex text-xs group-hover:text-accentColor font-light tracking-[0.3em] items-center gap-2 dark:text-gray-400"
         >
           Contact me
         </Link>

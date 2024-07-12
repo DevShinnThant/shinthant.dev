@@ -49,6 +49,7 @@ export default function BlogCard({ item }: Props) {
       >
         <div className="w-full flex flex-col md:flex-row items-center gap-5">
           <Image
+            priority
             width={140}
             height={120}
             className="h-full md:h-[120px] w-full md:w-[140px] transition-all group-hover:contrast-125 rounded-md"

@@ -61,7 +61,7 @@ export default function ProjectCard({ item }: Props) {
       ref={cardRef}
       className="relative overflow-hidden col-span-1 w-full flex flex-col shadow-sm border rounded-[0.75rem] h-[380px]"
     >
-      <Image alt={item.title} src={item.image} />
+      <Image priority alt={item.title} src={item.image} />
 
       <div className="flex-1  group relative after:content-[''] after:rounded-full after:absolute after:content after:z-[10] after:w-[32px] after:h-[32px] after:bg-accentColor after:scale-[1] after:bottom-[-24px] after:right-[-24px] after:origin-center after:transition-transform after:duration-500 after:ease-out hover:after:scale-[25] overflow-hidden p-4 flex flex-col items-start justify-between">
         <div className="w-full px-4 absolute left-[50%] -translate-x-1/2 z-20 flex flex-col gap-2 items-start ">

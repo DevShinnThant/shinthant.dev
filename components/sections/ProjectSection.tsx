@@ -64,7 +64,7 @@ export default function ProjectSection() {
       <Image
         src={Background}
         alt="project-section-background"
-        className="w-[95%] top-0 h-full absolute overflow-hidden pointer-events-none select-none"
+        className="w-full top-0 h-full absolute overflow-hidden pointer-events-none select-none"
       />
 
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-14">

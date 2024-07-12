@@ -398,7 +398,7 @@ const TechStack = () => {
             <path d="M20 16m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
             <path d="M20 8m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
           </svg>
-          <div className="dark:text-white text-lg font-medium">GrapQL</div>
+          <div className="dark:text-white text-lg font-medium">GraphQL</div>
         </div>
 
         <div className="flex items-center gap-2">
@@ -444,7 +444,7 @@ const TechStack = () => {
             <path d="M11 12v6" />
             <path d="M21 19v-14a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2 -2z" />
           </svg>
-          <div className="dark:text-white text-lg font-medium">TypeScript</div>
+          j<div className="dark:text-white text-lg font-medium">TypeScript</div>
         </div>
 
         <div className="flex items-center gap-2">
