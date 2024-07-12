@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import useOnScreen from "@/hooks/useOnScreen"
 import useScrollActive from "@/hooks/useScrollActive"
 import Background from "@/public/assets/backgrounds/project-bg.webp"
