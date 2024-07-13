@@ -1,4 +1,4 @@
-# Shin Thant Porfolio
+# Shin Thant Portfolio
 
 ![shinthant-portfolio](https://i.ibb.co/m5bYtw6/responsive-showcase.png)
 
