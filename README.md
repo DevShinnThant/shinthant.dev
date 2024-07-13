@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shin Thant Porfolio
 
-## Getting Started
+![shinthant-portfolio](https://i.ibb.co/WPdvqTr/Screenshot-2024-07-13-at-11-07-07-AM.png)
 
-First, run the development server:
+![ts](https://badgen.net/badge/Built%20With/TypeScript/blue) ![vercel](https://img.shields.io/github/deployments/satnaing/my-portfolio/production?label=vercel&logo=vercel&logoColor=white)
+
+My portfolio website developed with Next.JS(SSG) and TypeScript. Tailwind CSS and GSAP is used for styling and animations. Light & Dark themes supported.
+
+## Features
+
+- Responsive Design 📱💻
+- Light & Dark themes ☀️🌙
+- Fully Accessible ♿️
+- SEO Friendly 🔎
+
+## Tech Stack
+
+**Frontend** - [NextJS](https://nextjs.org/), [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)  
+**Styling** - [Tailwind CSS](https://tailwindcss.com/)  
+**Animations** - [GSAP](https://greenstock.com/)  
+**Design & Prototype** - [Figma](https://figma.com/)  
+**State Management** - [Zustand](https://zustand-demo.pmnd.rs/)  
+**Deployment** - [Vercel](https://vercel.com/)
+
+## Lighthouse Score
+
+<p align="center">
+  <a href="https://pagespeed.web.dev/analysis/https-devshinthant-vercel-app/sgswm7q59t?form_factor=desktop">
+    <img width="710" alt="Shin Thant Portfolio Website Lighthouse Score" src="public/lighthouse.svg">
+  <a>
+</p>
+
+## Running Locally
+
+Clone the project
+
+```bash
+git clone https://github.com/ShinnTNT/shinthant.dev.git
+```
+
+Go to the project directory
+
+```bash
+cd shinthant.dev
+```
+
+Remove remote origin
+
+```bash
+git remote remove origin
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Inspiration and Credits
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Here are some inspiration and credits for the design of my portfolio. However I can guarantee that I wrote 100% of the code. These credits are just for ideas and design for my portfolio website.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Sat Naing Porfolio](https://satnaing.dev/)
+- [Flowtrix](https://www.flowtrix.co/)
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [@shinthant](https://devshinthant.vercel.app/)
