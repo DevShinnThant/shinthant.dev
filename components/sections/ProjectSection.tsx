@@ -13,6 +13,7 @@ import { useSectionStore } from "@/store/section"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import { StaticImageData } from "next/image"
+import Link from "next/link"
 import { RoughNotation } from "react-rough-notation"
 import ProjectCard from "../ProjectCard"
 
@@ -58,7 +59,7 @@ export default function ProjectSection() {
     <section
       ref={sectionRef}
       id="project"
-      className="relative h-full bg-white overflow-hidden py-14 px-10 lg:px-[5%]"
+      className="relative h-full bg-gray-50 overflow-hidden py-14 px-10 lg:px-[5%]"
     >
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-14">
         <div className="w-[80%] md:w-full flex absolute left-1/2 -translate-x-1/2 flex-col gap-8 items-center">
@@ -84,6 +85,19 @@ export default function ProjectSection() {
           {projects.map((project) => (
             <ProjectCard key={project.id} item={project} />
           ))}
+        </div>
+
+        <div>
+          Explore more projects in{" "}
+          <Link
+            href="https://github.com/ShinnTNT"
+            target="_blank"
+            aria-label="Expore more in my github profile"
+            rel="noopener noreferrer"
+            className="text-accentColor"
+          >
+            my github profile
+          </Link>
         </div>
       </div>
     </section>
