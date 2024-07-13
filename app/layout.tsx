@@ -24,12 +24,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "app",
-    site: "https://devshinthant.vercel.app/",
-    creator: "ShinThant",
-    images: "https://i.ibb.co/WPdvqTr/Screenshot-2024-07-13-at-11-07-07-AM.png",
-  },
   authors: {
     name: "Shin Thant",
   },
