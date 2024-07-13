@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Portfolio website",
     images: [
       {
-        url: "https://i.ibb.co/WPdvqTr/Screenshot-2024-07-13-at-11-07-07-AM.png",
+        url: "https://i.ibb.co/m5bYtw6/responsive-showcase.png",
       },
     ],
   },

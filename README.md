@@ -1,6 +1,6 @@
 # Shin Thant Porfolio
 
-![shinthant-portfolio](https://i.ibb.co/WPdvqTr/Screenshot-2024-07-13-at-11-07-07-AM.png)
+![shinthant-portfolio](https://i.ibb.co/m5bYtw6/responsive-showcase.png)
 
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue) ![vercel](https://img.shields.io/github/deployments/satnaing/my-portfolio/production?label=vercel&logo=vercel&logoColor=white)
 
