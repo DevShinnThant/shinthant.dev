@@ -52,7 +52,7 @@ export default function BlogCard({ item }: Props) {
             priority
             width={140}
             height={120}
-            className="h-full md:h-[120px] w-full md:w-[140px] transition-all group-hover:contrast-125 rounded-md"
+            className="h-full md:h-full bg-contain w-full md:w-[200px] transition-all group-hover:contrast-125 rounded-md"
             src={item.image}
             alt={item.title}
           />

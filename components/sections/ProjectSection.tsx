@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react"
 import useOnScreen from "@/hooks/useOnScreen"
 import useScrollActive from "@/hooks/useScrollActive"
-import Background from "@/public/assets/backgrounds/project-bg.webp"
 import ComingSoon from "@/public/assets/projects/coming-soon.png"
 import Ecommerce from "@/public/assets/projects/ecommerce.png"
 import GuessMyNumber from "@/public/assets/projects/guess-my-number.png"
@@ -13,7 +12,7 @@ import VSCode from "@/public/assets/projects/vscode.png"
 import { useSectionStore } from "@/store/section"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
-import Image, { StaticImageData } from "next/image"
+import { StaticImageData } from "next/image"
 import { RoughNotation } from "react-rough-notation"
 import ProjectCard from "../ProjectCard"
 
@@ -61,12 +60,6 @@ export default function ProjectSection() {
       id="project"
       className="relative h-full bg-white overflow-hidden py-14 px-10 lg:px-[5%]"
     >
-      <Image
-        src={Background}
-        alt="project-section-background"
-        className="w-full top-0 h-full absolute left-1/2 -translate-x-1/2 overflow-hidden pointer-events-none select-none"
-      />
-
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-14">
         <div className="w-[80%] md:w-full flex absolute left-1/2 -translate-x-1/2 flex-col gap-8 items-center">
           <RoughNotation
