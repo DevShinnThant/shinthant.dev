@@ -9,10 +9,8 @@ const Loader = () => {
   const [isAnimationFinished, setIsAnimationFinished] = useState<boolean>(false)
 
   useEffect(() => {
-    document.body.classList.add("no-scroll")
     const tl = gsap.timeline({
       onComplete: () => {
-        document.body.classList.remove("no-scroll")
         setIsAnimationFinished(true)
       },
     })
@@ -27,11 +25,6 @@ const Loader = () => {
       },
       ease: "power4.inOut",
     })
-
-    return () => {
-      // Remove the class to restore overflow on unmount
-      document.body.classList.remove("no-scroll")
-    }
   }, [])
 
   const [count, setCount] = useState(0)

@@ -53,7 +53,7 @@ export default function ContactSection() {
     <section
       ref={sectionRef}
       id="contact"
-      className="h-full bg-[#161D1F] py-[140px] px-10 lg:px-[5%]"
+      className="h-full bg-gray-100 dark:bg-[#161D1F] py-[140px] px-10 lg:px-[5%]"
     >
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col gap-40 items-center">
         <div className="flex flex-col items-center gap-2">
@@ -95,7 +95,7 @@ export default function ContactSection() {
                 height="15"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
-                stroke="#ffffff"
+                className="stroke-black dark:stroke-white"
                 fill="none"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -120,7 +120,7 @@ export default function ContactSection() {
                 height="15"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
-                stroke="#ffffff"
+                className="stroke-black dark:stroke-white"
                 fill="none"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -147,7 +147,7 @@ export default function ContactSection() {
               out!
             </div>
           </div>
-          <div className="end-title text-white text-md">
+          <div className="end-title dark:text-white text-md">
             Made with ❤️ by Shin Thant
           </div>
         </div>

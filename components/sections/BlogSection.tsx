@@ -72,11 +72,11 @@ export default function BlogSection() {
             </div>
           </RoughNotation>
           <div ref={elementRef} className="overflow-hidden flex flex-col gap-1">
-            <div className="qoutes-animation mx-auto text-center text-sm text-white flex flex-col items-center font-normal">
+            <div className="qoutes-animation mx-auto text-center text-sm dark:text-white flex flex-col items-center font-normal">
               I document my journey by writing blog posts about my projects and
               experiences.
             </div>
-            <div className="qoutes-animation mx-auto text-center text-sm text-white flex flex-col items-center font-normal">
+            <div className="qoutes-animation mx-auto text-center text-sm dark:text-white flex flex-col items-center font-normal">
               <div>Check out some of my latest entries below. 🚀</div>
             </div>
           </div>

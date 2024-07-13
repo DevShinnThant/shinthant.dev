@@ -57,12 +57,12 @@ export default function BlogCard({ item }: Props) {
             alt={item.title}
           />
           <div className="flex w-full md:w-3/5 flex-col items-start gap-2">
-            <div className="text-gray-300">{item.title}</div>
+            <div className="dark:text-gray-300">{item.title}</div>
             <div className="flex items-center gap-2">
               <Edit size={16} color="gray" />
               <div className="text-accentColor text-sm">{item.publishAt}</div>
             </div>
-            <div className="text-gray-400 text-sm">{item.description}</div>
+            <div className="dark:text-gray-400 text-sm">{item.description}</div>
           </div>
         </div>
 

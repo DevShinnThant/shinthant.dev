@@ -59,7 +59,7 @@ export default function ProjectSection() {
     <section
       ref={sectionRef}
       id="project"
-      className="relative h-full bg-gray-100 overflow-hidden py-14 px-10 lg:px-[5%]"
+      className="relative h-full bg-gray-50 dark:bg-gray-100 overflow-hidden py-14 px-10 lg:px-[5%]"
     >
       <div className="w-full max-w-[1100px] h-full m-auto flex flex-col items-center gap-14">
         <div className="w-[80%] md:w-full flex absolute left-1/2 -translate-x-1/2 flex-col gap-8 items-center">

@@ -51,7 +51,7 @@ export default function SocialLinks() {
       <Link
         href="#about"
         aria-label="about"
-        className="absolute animate-bounce text-gray-400 hover:text-accentColor cursor-pointer bottom-4 left-[50%] -translate-x-1/2"
+        className="absolute animate-bounce text-gray-600 dark:text-gray-400 hover:text-accentColor cursor-pointer bottom-4 left-[50%] -translate-x-1/2"
       >
         <div className="flex flex-col gap-1 items-center">
           <Mouse size={24} />

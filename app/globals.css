@@ -99,10 +99,6 @@
     @apply bg-background text-foreground;
   }
 
-  body.no-scroll {
-    overflow-y: hidden;
-  }
-
   ::selection {
     background-color: #05cd77;
     color: #ffffff;
