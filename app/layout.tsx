@@ -11,6 +11,25 @@ export const metadata: Metadata = {
   title: "ShinThant.Dev",
   description: "A Frontend Developer",
   applicationName: "Portfolio",
+  openGraph: {
+    type: "website",
+    url: "https://devshinthant.vercel.app/",
+    title: "Shinthant.Dev",
+    description:
+      "Portfolio website developed with NextJS, TypeScript, ShadcnUI & GSAP.",
+    siteName: "Portfolio website",
+    images: [
+      {
+        url: "https://i.ibb.co/WPdvqTr/Screenshot-2024-07-13-at-11-07-07-AM.png",
+      },
+    ],
+  },
+  twitter: {
+    card: "app",
+    site: "https://devshinthant.vercel.app/",
+    creator: "ShinThant",
+    images: "https://i.ibb.co/WPdvqTr/Screenshot-2024-07-13-at-11-07-07-AM.png",
+  },
   authors: {
     name: "Shin Thant",
   },

@@ -24,11 +24,9 @@ My portfolio website developed with Next.JS(SSG) and TypeScript. Tailwind CSS an
 
 ## Lighthouse Score
 
-<p align="center">
-  <a href="https://pagespeed.web.dev/analysis/https-devshinthant-vercel-app/sgswm7q59t?form_factor=desktop">
-    <img width="710" alt="Shin Thant Portfolio Website Lighthouse Score" src="public/lighthouse.svg">
-  <a>
-</p>
+<a href="https://pagespeed.web.dev/analysis/https-devshinthant-vercel-app/sgswm7q59t?form_factor=desktop">
+<img width="630" height="200px" alt="Shin Thant Portfolio Website Lighthouse Score" src="public/lighthouse.svg">
+<a>
 
 ## Running Locally
 
