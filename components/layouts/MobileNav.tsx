@@ -1,19 +1,18 @@
 import { useState } from "react"
 import navlinks from "@/lib/navConfig"
 import { HambergerMenu } from "iconsax-react"
-import Link from "next/link"
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer"
+import { useRouter } from "next/navigation"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "../ui/button"
 
 export default function MobileNav() {
   const [opened, setOpened] = useState<boolean>(false)
+
+  const router = useRouter()
+
   return (
-    <Drawer
-      open={opened}
-      onClose={() => setOpened(false)}
-      onOpenChange={(open) => setOpened(open)}
-    >
-      <DrawerTrigger asChild className="block md:hidden">
+    <Sheet open={opened} onOpenChange={(open) => setOpened(open)}>
+      <SheetTrigger asChild className="block md:hidden">
         <Button
           className="dark:text-white px-2 flex justify-center items-center"
           variant="default"
@@ -22,23 +21,26 @@ export default function MobileNav() {
           <HambergerMenu />
           <span className="sr-only">Toggle Navbar</span>
         </Button>
-      </DrawerTrigger>
-      <DrawerContent className="h-[50%]">
-        <div className="py-20 w-full flex flex-col absolute z-10 gap-10 items-center">
+      </SheetTrigger>
+      <SheetContent className="w-full h-full border-0">
+        <div className="py-20 w-full flex flex-col absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 gap-10 items-center">
           {navlinks.map((navLink) => (
-            <Link
-              href={navLink.href}
+            <div
+              // href={navLink.href}
               className="dark:text-white hover:dark:text-accentColor"
               key={navLink.title}
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault()
+                router.push(navLink.href)
+
                 setOpened(false)
               }}
             >
               {navLink.title}
-            </Link>
+            </div>
           ))}
         </div>
-      </DrawerContent>
-    </Drawer>
+      </SheetContent>
+    </Sheet>
   )
 }

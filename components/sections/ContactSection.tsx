@@ -40,20 +40,22 @@ export default function ContactSection() {
   }, [])
 
   // Set Active Session
-  const aboutSectionOnView = useScrollActive(sectionRef)
+
+  const contactSectionOnView = useScrollActive(sectionRef)
+
   const { setSection } = useSectionStore()
 
   useEffect(() => {
-    aboutSectionOnView && setSection("#contact")
-  }, [aboutSectionOnView, setSection])
+    contactSectionOnView && setSection("#contact")
+  }, [contactSectionOnView, setSection])
 
   return (
     <section
       ref={sectionRef}
       id="contact"
-      className="h-full bg-[#161D1F] py-14 px-10 lg:px-[5%]"
+      className="h-full bg-[#161D1F] py-[140px] px-10 lg:px-[5%]"
     >
-      <div className="w-full max-w-[1100px] h-full m-auto flex flex-col gap-28 items-center">
+      <div className="w-full max-w-[1100px] h-full m-auto flex flex-col gap-40 items-center">
         <div className="flex flex-col items-center gap-2">
           <div className="overflow-hidden">
             <div className="title-animation dark:text-white text-lg">
