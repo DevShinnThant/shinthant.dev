@@ -2,7 +2,7 @@
 
 ![shinthant-portfolio](https://i.ibb.co/m5bYtw6/responsive-showcase.png)
 
-![ts](https://badgen.net/badge/Built%20With/TypeScript/blue) ![vercel](https://img.shields.io/github/deployments/satnaing/my-portfolio/production?label=vercel&logo=vercel&logoColor=white)
+![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 
 My portfolio website developed with Next.JS(SSG) and TypeScript. Tailwind CSS and GSAP is used for styling and animations. Light & Dark themes supported.
 

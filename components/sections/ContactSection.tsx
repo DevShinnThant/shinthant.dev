@@ -83,7 +83,7 @@ export default function ContactSection() {
             </Link>
 
             <Link
-              href="https://github.com/ShinnTNT"
+              href="https://x.com/dev_shinnthant"
               aria-label="Contact me on Twitter"
               target="_blank"
               rel="noopener noreferrer"
