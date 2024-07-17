@@ -162,8 +162,8 @@ const projects: Project[] = [
       "A refined and enhanced showcase of my work, designed to highlight my skills and projects with a sleek and modern interface.",
     techStacks: ["NextJS", "ShadnUI", "GSAP"],
     image: PortfolioV2,
-    githubURL: "",
-    githubApi: "",
+    githubURL: "https://github.com/ShinnTNT/shinthant.dev",
+    githubApi: "https://api.github.com/repos/ShinnTNT/shinthant.dev",
   },
   {
     id: 6,
