@@ -9,8 +9,8 @@
     clip-rule="evenodd"
     d="M17.5 15l.625 1.875L20 17.5l-1.875.625L17.5 20l-.625-1.875L15 17.5l1.875-.625L17.5 15zM6 17l.25.75L7 18l-.75.25L6 19l-.25-.75L5 18l.75-.25L6 17zM11 4l1.5 4.5L17 10l-4.5 1.5L11 16l-1.5-4.5L5 10l4.5-1.5L11 4z"
     stroke="#5550FF"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     ></path>
 </svg>
