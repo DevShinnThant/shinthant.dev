@@ -6,6 +6,7 @@ import useScrollActive from "@/hooks/useScrollActive"
 import ComingSoon from "@/public/assets/projects/coming-soon.png"
 import Ecommerce from "@/public/assets/projects/ecommerce.png"
 import GuessMyNumber from "@/public/assets/projects/guess-my-number.png"
+import MiroClone from "@/public/assets/projects/miro-clone.png"
 import Music from "@/public/assets/projects/music-app.png"
 import PortfolioV2 from "@/public/assets/projects/portfolio-v2.png"
 import VSCode from "@/public/assets/projects/vscode.png"
@@ -167,11 +168,12 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    title: "Landing Page",
-    description: "Coming Soon...",
-    techStacks: ["NextJS", "ShadnUI", "GSAP"],
-    image: ComingSoon,
-    githubURL: "",
-    githubApi: "",
+    title: "Miro Clone",
+    description:
+      "Enjoy a wide range of brushes, colors, and effects, along with layers, undo/redo functionality, and easy sharing options.",
+    techStacks: ["NextJS", "ShadnUI", "Convex", "Clerk", "Liveblocks"],
+    image: MiroClone,
+    githubURL: "https://github.com/ShinnTNT/realtime-miro-clone",
+    githubApi: "https://api.github.com/repos/ShinnTNT/realtime-miro-clone",
   },
 ]
