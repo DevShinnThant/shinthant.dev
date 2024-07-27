@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react"
 import useOnScreen from "@/hooks/useOnScreen"
 import useScrollActive from "@/hooks/useScrollActive"
-import ComingSoon from "@/public/assets/projects/coming-soon.png"
 import Ecommerce from "@/public/assets/projects/ecommerce.png"
 import GuessMyNumber from "@/public/assets/projects/guess-my-number.png"
 import MiroClone from "@/public/assets/projects/miro-clone.png"
