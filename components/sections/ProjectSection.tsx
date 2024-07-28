@@ -94,7 +94,7 @@ export default function ProjectSection() {
             target="_blank"
             aria-label="Expore more in my github profile"
             rel="noopener noreferrer"
-            className="text-accentColor"
+            className="text-accentColor navlink dark:hover:text-black"
           >
             my github profile
           </Link>

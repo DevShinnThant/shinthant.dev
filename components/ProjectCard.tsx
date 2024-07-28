@@ -94,7 +94,7 @@ export default function ProjectCard({ item }: Props) {
         </div>
 
         <div className="w-full px-4 left-[50%] -translate-x-1/2 bottom-[10%] absolute z-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex w-3/4 overflow-x-scroll items-center gap-2">
             {item.techStacks.map((tech, index) => {
               return index % 2 === 0 ? (
                 <div
