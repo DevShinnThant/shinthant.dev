@@ -4,7 +4,7 @@
 
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 
-My portfolio website developed with Next.JS(SSG) and TypeScript. Tailwind CSS and GSAP is used for styling and animations. Light & Dark themes supported.
+My portfolio website developed with Next.JS(SSG) and TypeScript. Tailwind CSS and GSAP is used for styling and animations. Light & Dark themes supported. Dark is first priotic.
 
 ## Features
 
