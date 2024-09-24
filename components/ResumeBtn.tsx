@@ -69,7 +69,7 @@ export default function ResumeBtn() {
   return (
     <a
       role="button"
-      href="https://shinthant-frontend-dev.tiiny.site/"
+      href="https://shin-thant-portfolio.tiiny.site/"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Resume"
