@@ -5,6 +5,7 @@ import useOnScreen from "@/hooks/useOnScreen"
 import useScrollActive from "@/hooks/useScrollActive"
 import Ecommerce from "@/public/assets/projects/ecommerce.png"
 import GuessMyNumber from "@/public/assets/projects/guess-my-number.png"
+import MantineBoards from "@/public/assets/projects/mantine-boards.png"
 import MiroClone from "@/public/assets/projects/miro-clone.png"
 import Music from "@/public/assets/projects/music-app.png"
 import PortfolioV2 from "@/public/assets/projects/portfolio-v2.png"
@@ -122,38 +123,8 @@ const projects: Project[] = [
       "My portfolio website in vscode version developed with React and TypeScript.",
     techStacks: ["ReactJS", "TypeScript"],
     image: VSCode,
-    githubURL: "https://github.com/ShinnTNT/vscode-portfolio",
-    githubApi: "https://api.github.com/repos/ShinnTNT/vscode-portfolio",
-  },
-  {
-    id: 2,
-    title: "Exclusive Ecommerce",
-    description:
-      "A cutting-edge e-commerce web application designed to provide a seamless shopping experience.",
-    techStacks: ["NextJS", "Strapi", "Radix UI"],
-    image: Ecommerce,
-    githubURL: "https://github.com/ShinnTNT/exclusive-ecommerce",
-    githubApi: "https://api.github.com/repos/ShinnTNT/exclusive-ecommerce",
-  },
-  {
-    id: 3,
-    title: "Music Web App",
-    description:
-      "An innovative music web application that brings your favorite tunes to your fingertips.",
-    techStacks: ["NextJS", "Strapi", "Radix UI"],
-    image: Music,
-    githubURL: "https://github.com/ShinnTNT/music-player",
-    githubApi: "https://api.github.com/repos/ShinnTNT/music-player",
-  },
-  {
-    id: 4,
-    title: "Guess My Number",
-    description:
-      "An engaging web app created with vanilla JavaScript where users can test their luck and intuition by guessing a randomly generated number.",
-    techStacks: ["Vanilla JavaScript", "CSS"],
-    image: GuessMyNumber,
-    githubURL: "https://github.com/ShinnTNT/Guess-My-Number",
-    githubApi: "https://api.github.com/repos/ShinnTNT/Guess-My-Number",
+    githubURL: "https://github.com/DevShinnThant/vscode-portfolio",
+    githubApi: "https://api.github.com/repos/DevShinnThant/vscode-portfolio",
   },
   {
     id: 5,
@@ -162,8 +133,38 @@ const projects: Project[] = [
       "A refined and enhanced showcase of my work, designed to highlight my skills and projects with a sleek and modern interface.",
     techStacks: ["NextJS", "ShadnUI", "GSAP"],
     image: PortfolioV2,
-    githubURL: "https://github.com/ShinnTNT/shinthant.dev",
-    githubApi: "https://api.github.com/repos/ShinnTNT/shinthant.dev",
+    githubURL: "https://github.com/DevShinnThant/shinthant.dev",
+    githubApi: "https://api.github.com/repos/DevShinnThant/shinthant.dev",
+  },
+  {
+    id: 4,
+    title: "Mantine Boards",
+    description:
+      "Responsive Dashboards, perfect for admin dashboards, analytics platforms, or any project that requires a clean, modern interface.",
+    techStacks: ["RemixJS", "MantineUI"],
+    image: MantineBoards,
+    githubURL: "https://github.com/DevShinnThant/mantine-boards",
+    githubApi: "https://api.github.com/repos/DevShinnThant/mantine-boards",
+  },
+  {
+    id: 2,
+    title: "Exclusive Ecommerce",
+    description:
+      "A cutting-edge e-commerce web application designed to provide a seamless shopping experience.",
+    techStacks: ["NextJS", "Strapi", "Radix UI"],
+    image: Ecommerce,
+    githubURL: "https://github.com/DevShinnThant/exclusive-ecommerce",
+    githubApi: "https://api.github.com/repos/DevShinnThant/exclusive-ecommerce",
+  },
+  {
+    id: 3,
+    title: "Music Web App",
+    description:
+      "An innovative music web application that brings your favorite tunes to your fingertips.",
+    techStacks: ["NextJS", "Strapi", "Radix UI"],
+    image: Music,
+    githubURL: "https://github.com/DevShinnThant/music-player",
+    githubApi: "https://api.github.com/repos/DevShinnThant/music-player",
   },
   {
     id: 6,
@@ -172,7 +173,7 @@ const projects: Project[] = [
       "Enjoy a wide range of brushes, colors, and effects, along with layers, undo/redo functionality, and easy sharing options.",
     techStacks: ["NextJS", "ShadnUI", "Convex", "Clerk", "Liveblocks"],
     image: MiroClone,
-    githubURL: "https://github.com/ShinnTNT/realtime-miro-clone",
-    githubApi: "https://api.github.com/repos/ShinnTNT/realtime-miro-clone",
+    githubURL: "https://github.com/DevShinnThant/realtime-miro-clone",
+    githubApi: "https://api.github.com/repos/DevShinnThant/realtime-miro-clone",
   },
 ]
